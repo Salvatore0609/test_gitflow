@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <title>YOUTUBE CLONE</title>
+</head>
+
+<body>
+    <div id="sidebar"> <!-- creiamoci un elemento blocco per ogni icona per poterci lavorare meglio -->
+        <div class="sidebar-icon">
+            <ion-icon name="menu-sharp"></ion-icon>
+        </div>
+        <div class="sidebar-icon">
+            <ion-icon name="home-sharp"></ion-icon>
+            <p>Home</p>
+        </div>
+        <div class="sidebar-icon">
+            <ion-icon name="compass-sharp"></ion-icon>
+            <p>Explore</p>
+        </div>
+        <div class="sidebar-icon">
+            <ion-icon name="albums-sharp"></ion-icon>
+            <p>Library</p>
+        </div>
+    </div>
+    <div id="main">
+        <div id="topbar">
+            <img src="assets/YouTube-Logo.png" alt="youtube-logo" id="logo" />
+            <div id="search-wrapper">
+                <inpunt type="text" placeholder="Search on Youtube..." />
+                <button>
+                    <div>
+                        <ion-icon name="search-sharp"></ion-icon>
+                    </div>
+                </button>
+                <div>
+                    <ion-icon name="mic-sharp"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div id="content">content</div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    Basic usage
+</body>
+
+</html>
