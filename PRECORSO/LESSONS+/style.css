@@ -1,0 +1,46 @@
+.child {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: orange;
+    margin: 5px;
+    padding: 10px;
+    font-size: 2em;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+/*
+flexbox si definisce tramite il main axis (asse principale) e il cross axis (asse incrociata che è perpendicolare alla main axis)
+la prima è caratterizzata dalla proprietà(valore) flex-direction che a sua volta
+ha delle sotto proprietà.
+
+Proprietà Flex Container
+- flex-direction --> row(di default) | column | row-reverse | column-reverse.
+- flex-wrap --> da un ordine mantenendo le dimensioni px inserite creandosi uno spazio e quindi facendo cadere gli elementi ANCHE su una nuova riga.
+- justify-content --> ha diverse funzionalità di spostamento (sull'asse orizzontale, l'asse main) mantendendo l'ordine originario 
+-- center= centra
+-- flex-end= porta alla fine
+-- space-around= centra e crea uno spazio di uguale dimensione sia tra figli che ai lati schermo.
+-- space-between= fa lo stesso tranne per gli spazi laterale schermo che non variano
+
+
+
+-(lavora per la cross axis, quindi la parallalela nel caso fossimo nella main axis)- align-items - (lavora per la main axis, quindi la parallalela nel caso fossimo nella cross axis)
+
+- align-content = ti da la possibilità di ordinare l'intero container in base al valore es: align-content: center/end/flex-end/normal ecc..
+
+
+vh è l'unità di misura che indica lo spazio che io ho a schermo, il viewport. l'intero spazio è 100vh.
+
+
+Ci sono anche proprietà che possiamo dare ai children quindi i Flex Items
+- align-self --> lavora con il singolo children, escludendo il parent.
+- order
+- flex-grow
+- flex-shrink
+- flex-basis
+*/
