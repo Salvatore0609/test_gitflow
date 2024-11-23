@@ -23,6 +23,7 @@ body {
 .video-card {
     flex: 1;
     min-width: 600px;
+    min-height: 600px;
     /*width: 600px;*/
     /*height: 400px;*/
     color: black;
@@ -60,7 +61,7 @@ body {
 
 .thumbnail-wrapper {
     flex: 2;
-    max-height: 300px;
+    max-height: 400px;
 }
 
 .thumbnail {
@@ -83,6 +84,12 @@ body {
 
 .title {
     font-weight: 700;
+}
+
+.dspt{
+    font-family: inherit;
+    line-height: 1.15;
+    font-size: 80%
 }
 
 /*--------SIDEBAR--------*/
@@ -117,7 +124,6 @@ body {
     height: 8vh;
     display: flex;
     justify-content: space-between;
-
     align-items: center;
 }
 
