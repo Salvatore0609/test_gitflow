@@ -28,6 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .sidebar-icon p {
@@ -45,8 +46,43 @@ body {
 #topbar {
     height: 8vh;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #logo {
     height: 50%;
+}
+
+#search-wrapper {
+    display: flex;
+    height: 50%;
+}
+
+#topbar-icons {
+    display: flex;
+}
+
+.topbar-icon ion-icon {
+    font-size: 2.5em;
+    padding: 0 0.3em;  /*0 in altezza*/
+    display: flex;
+    align-items: center;
+}
+
+#mic-icon {
+    margin: 0 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+#mic-icon ion-icon {
+    font-size: 2em;
+}
+
+#search-btn {
+    padding: 0 0.8em;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
 }
