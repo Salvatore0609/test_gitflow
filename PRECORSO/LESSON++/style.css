@@ -12,7 +12,73 @@ body {
 }
 
 #content {
+    /*height: 100%;*/
+    gap: 5em;
+    padding: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    flex: 1;
+    min-width: 600px;
+    /*width: 600px;*/
+    /*height: 400px;*/
+    color: black;
+    background-color: orange;
+    /*margin: 5px;
+    padding: 10px;*/
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1.5;
+    border-radius: 25px;
+    overflow: hidden; /* la parte dell'elemento che esce fuori dal blocco, viene da tagliata per essere adattata al blocco*/
+}
+
+.card-description {
+    flex: 1;
+    background-color: white;
+    display: flex;
+}
+.avatar {
+    width: 90px;
+    height: 90px;
+    /*width: 600px;*/
+    /*height: 400px;*/
+    color: white;
+    background-color: black;
+    /*margin: 5px;
+    padding: 10px;*/
+    font-size: 2em;
+    aspect-ratio: 1;
+    align-self: center;
+    border-radius: 100%;
+    
+}
+
+.thumbnail-wrapper {
+    flex: 2;
+    max-height: 300px;
+}
+
+.thumbnail {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-description {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-description p {
+    margin: 0;
 }
 
 /*--------SIDEBAR--------*/
@@ -61,11 +127,13 @@ body {
 
 #topbar-icons {
     display: flex;
+    gap: 1em;
+    padding: 0 1em;
 }
 
 .topbar-icon ion-icon {
     font-size: 2.5em;
-    padding: 0 0.3em;  /*0 in altezza*/
+    /*padding: 0 0.3em sostituito dal gap /*0 in altezza*/
     display: flex;
     align-items: center;
 }
