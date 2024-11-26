@@ -7,15 +7,46 @@
 </head>
 <body>
     <div>
-        <form>
+        <form action="elaborazioneForm.java" method="POST" autocomplete="on">
             <fieldset>
                 <legend>Form</legend>
                 <label for="name">FullName:</label>
-                <input type="text" id="name" placeholder="name..."/>
-                <label for="myEmail">Email:</label>
-                <input type="email" id="myEmail" placeholder="example@example.ext"/>
-                <input type="number" />
-                <input type="date" />
+                <input type="text" id="name" name="fullname" placeholder="Es. Mario Rossi"/> 
+                <br />
+                <label for="myEmail">Email Address:</label>
+                <input type="email" id="myEmail" name="myEmail" placeholder="example@example.ext"/>
+                <br />
+                <label for="myPassword">Password:</label>
+                <input type="password" id="myPassword" name="password" placeholder="*********"/>
+                <br />
+                <label for="myAge">Age:</label>
+                <input type="number" id="myAge" name="age" />
+                <br />
+                <label for="myFiscalCode">FiscalCode:</label>
+                <input type="file" id="myFiscalCode" name="fiscalCode" />
+                <br />
+                <label for="myDate">Date:</label>
+                <input type="date" id="myDate" name="date"/>
+                <br />
+                Materie Preferite
+                <label for="html">HTML:</label>
+                <input type="checkbox" id="html" name="html"/>
+                <label for="css">CSS:</label>
+                <input type="checkbox" id="css" name="css"/>
+                <label for="js">JS:</label>
+                <input type="checkbox" id="js" name="js"/>
+                <br />
+                Materie Preferite
+                <label for="sesso">Sesso:</label>
+                Donna: <input type="radio" id="sesso" name="sesso" value="donna"/>
+                Uomo: <input type="radio" id="sesso" name="sesso" value="uomo"/>
+                Altro: <input type="radio" id="sesso" name="sesso" value="altro"/>
+                <br />
+                <!-- button è un bottone generico -->
+                <button>Invia</button>
+                <input type="submit" value="Invia" />
+                <input type="reset" value="Reimposta" />
+                <input type="hidden" id="hidden" name="hiddenField"/>
             </fieldset>
         </form>
     </div>
