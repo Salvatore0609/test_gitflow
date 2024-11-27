@@ -1,69 +1,125 @@
-#logo {
-    width: 15%;
-    display: block;
-    margin: 0 auto;
+header img {
+    width: 160px;
 }
 
-#image {
-    width: 50%;
+article img {
+    width: 100%;
     border-radius: 2%;
     box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.156);
-    display: block;
-    margin: 0 auto;
 }
 
-header, div {
+body {
     text-align: center;
 }
 
-#container {
+header nav {
     font-size: 0.8em;
     color: rgb(56, 116, 96);
-    padding: 1em;
-    background-color: rgba(255, 213, 0, 0.062);
-    display: inline-block;
-    margin: 0 auto;
+    background-color: rgba(255, 213, 0, 0.092);
+    padding: 0.2em;
+    border-top: 1px solid rgba(255, 162, 0, 0.466);
 }
 
-#container2 {
+article {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+article h1 {
+    text-align: center;
     font-size: 1.5em;
     color: rgb(65, 64, 64);
-    display: inline-block;
-    margin: 0 auto;
 }
 
-#container3 {
+#primotesto {
     font-size: 0.8em;
     font-weight: bold;
     color: rgb(65, 64, 64);
-    display: inline-block;
-    margin: 0 auto;
 }
 
-#container4 {
-    font-size: 0.8em;
+#autore {
+    text-align: center;
+    font-size: 1em;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.37);
-    display: inline-block;
-    margin: 0 auto;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
-#container5 {
+#correlati {
     font-size: 0.8em;
     font-weight: bold;
     color: rgb(221, 105, 3);
-    display: inline-block;
-    margin: 0 auto;
+    padding: 0.1em;
+    border-left: 1px solid rgba(255, 162, 0, 0.547);
 }
 
-#container5 a {
+#correlati p {
+    margin: 0;
+    margin-left: 0.5em;
+}
+
+#correlati a{
     font-size: 1em;
     font-weight: bold;
-    color: rgb(77, 159, 132);
+    color: rgb(69, 145, 120);
 }
 
-.centered-text {
-    text-align: center;
-    display: inline-block;
-    margin: 0 auto;
+#ingredienti div {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid rgb(137, 244, 209);
 }
+
+#ingredienti h2{
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.749);
+}
+
+#ingredienti p {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.749);
+}
+
+#ingredienti ul {
+    padding-left: 1.5em;
+}
+
+#ingredienti li {
+    font-size: 0.8em;
+    margin: 0.5rem;
+}
+
+#metodo {
+    color: rgba(0, 0, 0, 0.749);
+}
+
+#metodo div {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid rgb(137, 244, 209);
+}
+
+.p1 {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+section ::marker {
+    font-size: 0.8em;
+}
+
+.p2 {
+    font-size:0.8em;
+    font-weight: 400;
+}
+
+footer {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+footer a {
+    color: rgb(69, 145, 120);
+}
+
