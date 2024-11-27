@@ -21,7 +21,7 @@ header nav {
 }
 
 article {
-    width: 50%;
+    width: 23%;
     margin: auto;
     text-align: left;
 }
@@ -114,7 +114,8 @@ section ::marker {
 }
 
 footer {
-    width: 50%;
+    font-size: 0.8em;
+    width: 23%;
     margin: auto;
     text-align: left;
 }
