@@ -90,7 +90,8 @@ article h1 {
     margin: 0.5rem;
 }
 
-#metodo {
+#metodo h2 {
+    font-size: 1.2em;
     color: rgba(0, 0, 0, 0.749);
 }
 
