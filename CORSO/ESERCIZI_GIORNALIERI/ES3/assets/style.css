@@ -2,6 +2,18 @@ header img {
     width: 160px;
 }
 
+article {
+    width: 23%;
+    margin: auto;
+    text-align: left;
+}
+
+article h1 {
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(65, 64, 64);
+}
+
 article img {
     width: 100%;
     border-radius: 2%;
@@ -18,18 +30,6 @@ header nav {
     background-color: rgba(255, 213, 0, 0.092);
     padding: 0.2em;
     border-top: 1px solid rgba(255, 162, 0, 0.466);
-}
-
-article {
-    width: 23%;
-    margin: auto;
-    text-align: left;
-}
-
-article h1 {
-    text-align: center;
-    font-size: 1.5em;
-    color: rgb(65, 64, 64);
 }
 
 #primotesto {
