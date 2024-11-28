@@ -4,7 +4,7 @@
 
 body {
     text-align: center;
-    padding: 5em;
+    padding: 1em;
     background-image: url("../img/sfondo.png");
     background-size: auto;
     background-position: top center;
@@ -40,10 +40,31 @@ header nav {
     margin: 1em;
 }
 
+ul li a::before{
+    content: "=> "
+}
+
+ul li a::after{
+    content: " <="
+}
+
+ul li a {
+    text-decoration: none;
+    margin: 1em;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
 hr {
     visibility: hidden;
 }
 /* MAIN */
+
+main {
+    
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
 
 article {
     background-color: white;
@@ -60,10 +81,6 @@ article h1 {
     line-height: 1.5em;
     font-weight: 600;
     margin: 1em
-}
-
-main {
-    
 }
 
 #autore {
@@ -85,9 +102,31 @@ main {
 
 #lista {
     margin: 1em;
+    line-height: 1.5em;
 }
 
-/* ELEMENTI NEL MAIN - ARTICLE */
+article li {
+    margin-left: 2em;
+    margin-right: 2em;
+    list-style-type: disc;
+    line-height: 1.5em;
+}
+
+code {
+    background-color: rgba(128, 128, 128, 0.203);
+    border: 1px solid rgba(0, 0, 0, 0.431);
+    border-radius: 20%;
+}
+
+
+article h2 {
+    margin: 1em;
+    
+}
+
+#parte2article {
+    margin: 1em;
+}
 
 /* TABELLE */
 
