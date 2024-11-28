@@ -1,8 +1,82 @@
 /* IMPOSTAZIONI GENERALI */
 
-/* HEADER */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap');
 
+body {
+    text-align: center;
+    padding: 5em;
+    background-image: url("../img/sfondo.png");
+    background-size: auto;
+    background-position: top center;
+}
+
+/* HEADER */
+header {
+    background: rgb(5, 124, 153);
+    background: -moz-linear-gradient(0deg, rgba(5, 124, 153, 1) 46%, rgba(19, 134, 153, 1) 60%, rgba(48, 169, 200, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(5, 124, 153, 1) 46%, rgba(19, 134, 153, 1) 60%, rgba(48, 169, 200, 1) 100%);
+    background: linear-gradient(0deg, rgba(5, 124, 153, 1) 46%, rgba(19, 134, 153, 1) 60%, rgba(48, 169, 200, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#057c99", endColorstr="#30a9c8", GradientType=1);
+
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding-bottom: 0.01em;
+    overflow: visible;
+    box-shadow: 0px 2px 5px 2px grey;
+}
+
+header img {
+    width: 200px;
+    margin: 1.5em
+}
+
+header p {
+    color: white;
+    font-weight: bold;
+    margin: 1em
+}
+
+header nav {
+    margin: 1em;
+}
+
+hr {
+    visibility: hidden;
+}
 /* MAIN */
+
+article {
+    background-color: white;
+    box-shadow: 0px 5px 5px 2px grey;
+    width: 100%;
+    padding-top: 0.01em;
+    margin: auto;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+}
+
+article h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em
+}
+
+#autore {
+    margin:1em;
+    font-size: 1em;
+    color: rgb(165, 164, 164)
+}
+
+#parte1 {
+    margin: 1em;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+
+#parte1 strong {
+    color: rgb(178, 97, 169);
+    font-weight: bold;
+}
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
