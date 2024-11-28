@@ -203,16 +203,17 @@ caption {
     font-style: italic;
     font-weight: bold;
 }
+
 th {
     font-family: "Poppins", sans-serif;
     background-color: rgba(2, 2, 251, 0.321);
     color: white;
     padding: 1.2em;
-    line-height: 1.5em;
+    border-right: 1px solid white;
 }
 
-tr #anno {
-    padding-top:2em
+#anno {
+    vertical-align: bottom;
 }
 
 tbody {
