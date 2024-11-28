@@ -1,5 +1,17 @@
+body {
+    text-align: center;
+}
+
 header img {
     width: 160px;
+}
+
+header nav {
+    font-size: 0.8em;
+    color: rgb(56, 116, 96);
+    background-color: rgba(255, 213, 0, 0.092);
+    padding: 0.2em;
+    border-top: 1px solid rgba(255, 162, 0, 0.466);
 }
 
 article {
@@ -18,18 +30,6 @@ article img {
     width: 100%;
     border-radius: 2%;
     box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.156);
-}
-
-body {
-    text-align: center;
-}
-
-header nav {
-    font-size: 0.8em;
-    color: rgb(56, 116, 96);
-    background-color: rgba(255, 213, 0, 0.092);
-    padding: 0.2em;
-    border-top: 1px solid rgba(255, 162, 0, 0.466);
 }
 
 #primotesto {
