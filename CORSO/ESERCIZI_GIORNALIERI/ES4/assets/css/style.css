@@ -27,7 +27,7 @@ header {
 
 header img {
     width: 200px;
-    margin: 1.5em
+    margin: 1em
 }
 
 header p {
@@ -56,9 +56,14 @@ article {
 }
 
 article h1 {
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 600;
     margin: 1em
+}
+
+main {
+    
 }
 
 #autore {
@@ -76,6 +81,10 @@ article h1 {
 #parte1 strong {
     color: rgb(178, 97, 169);
     font-weight: bold;
+}
+
+#lista {
+    margin: 1em;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
