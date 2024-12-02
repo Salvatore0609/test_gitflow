@@ -56,8 +56,12 @@ myName = "Desole";
 console.log(myName)
 const MYSURNAME = "Desole";
 console.log(MYSURNAME)
-/* MYSURNAME = "Solinas";
-console.log(MYSURNAME) */ //in console darà errore perchè una costante non è modificabile
+/* 
+MYSURNAME = "Solinas";
+console.log(MYSURNAME) 
+D1.js:59 Uncaught TypeError: Assignment to constant variable.
+at D1.js:59:11 ---> messaggio d'errore della console che dimostra che un const non può cambiare valore 
+*/
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
