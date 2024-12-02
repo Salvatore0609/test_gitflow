@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(246, 246, 171);
+    
+}
+
+#box1 {
+    /*ricordardi che è già influenzato dal da browser*/
+    /*px solo per esempio ma non è consigliato*/
+    width: 500px; 
+    /*padding-left: 10px; /*crea spazio*/
+    /*padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; */
+    /*padding: 10px 10px 10px 10px; /*forma contratta delle regole di sopra*/
+    /*padding: 10px 10px; /* il primo sarà top e bottom, il secondo left e right */
+    padding: 10px; /*tutti*/
+    /*border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: blue;*/
+    border-top: 3px solid blue; /*forma contratta*/ 
+    /*margin-top: 25px;
+    margin-left: 25px;*/ /*pure per gli altri lati*/
+    /*margin: 25px 25px 25px 25px;*/
+    margin: 0 auto;
+    background-color: white;
+    /*di defoult box-sizing: content-box;*/
+    box-sizing: border-box;
+}
+
+#box2 {
+    width: 500px; 
+    /*altro esempio di border*/
+    border: 3px solid blue;
+    background-color: white;
+    border-top-left-radius: 25%; /*non essendo un quadrato lo deforma in modo diverso*/
+}
+
+#box3{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border-radius: 10%;
+}
+
+div p {
+    text-align: justify;
+}
