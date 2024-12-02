@@ -30,13 +30,13 @@ let miaVarBool = true;
 
 
 /* questo è considerato come testo per rientra tra due apici,
-quindi è una stringa */ 
+quindi è una stringa */
 let miaVarNumeroStringa = "10"
 
 //posso fare anche espressioni
-let a = 10;
-let b = a;
-let c = a + b; 
+let aa = 10;
+let bb = aa;
+let cc = aa + bb;
 
 //posso sostituire il valore nella stessa variabile
 let nomeM = "Mario";
@@ -67,7 +67,7 @@ let booleano = true; // true = 1, false = 0
 console.log(numero + booleano) //darà 14
 
 //Null o undefined
-let x; 
+let x;
 console.log(x) // sarà undefined
 
 let y = "ciao";
@@ -77,19 +77,142 @@ console.log(y) //darà null
 concludi l'acquisto e il carrello si svuota quindi null */
 
 
-/* 
-OPERATORI ARITMETICI con assegnazione, assegna e operizza
-= 
-+=
--=
-*=
-/= 
 
-*/
 
+//ES:
 let num1 = 5;
 let num2 = 2;
 // num2 = num2 + 3;
 //posso farlo anche così
 num2 += 3;
 console.log(num2);
+
+/* OPERATORI DI ASSEGNAMENTO
+= 
+*/
+
+/* OPERATORI ARITMETICI
++ - / * %
+*/
+
+/* OPERATORI ARITMETICI con assegnamento, assegna e operizza
+= += -= *= /= %=
+*/
+
+/* OPERATORI CONDIZIONALI
+< > >= <= 
+*/
+
+let a = 10;
+let b = 5;
+let c = a > b; // sarà true pechè da un risultato booleano
+
+/* OPERATORI DI COMPARAZIONE 
+== != === !==
+*/
+
+let d = 5;
+let e = 5; //se questo fosse una stringa lo leggerebbe comunque true perchè non verifica il tipo ma solo il valore con il ==
+console.log(d == e) //stamperà true
+console.log(d != e) //stamperà false
+// con (strettamente uguale) === verifica sia il tipo che valore quindi restituirà false
+let f = 5;
+let g = "5";
+console.log(f === g); //stampa false
+console.log(f !== g); //stampa true 
+//anche (strettamente diverso) !== verifica sia il tipo che il valore
+
+
+/* OPERATORI LOGICI 
+AND -> &&
+OR -> ||
+NOT -> !
+
+true && true --> true
+true && false --> false
+false && true --> false
+false && false --> false
+
+true || true --> true
+true || false --> true
+false || true --> true
+false || false --> false
+
+!true --> false
+!false --> true
+*/
+
+//typeof
+let s = "salvatore";
+console.log(typeof s)
+
+//condizioni
+let z = 10
+let k = 5
+
+if (z < k) {
+    console.log("sono dentro la struttura IF")
+}
+z = ""
+//if ()
+
+
+/* OPERATORE TERNARIO serve solo per inizializzare una variabile 
+MA in base ad una condizione (x < y) ? true : false; 
+let varName = (condizione) ? valoreTrue : valoreFalse */
+
+let age = 18;
+let ingresso = (age >= 18) ? "Ingresso Permesso" : "Ingresso Vietato"
+console.log(ingresso)
+
+//ottengo lo stesso risultato in questo modo
+
+let age2 = age;
+let ingresso2;
+//aggiungiamo anche un AND per esempio
+//quindi SE (è maggiore uguale a 18 AND minore uguale a 30) ingresso permesso, ELSE ingresso vietato.
+if (age >= 18 && age <= 30) {
+    ingresso2 = "Ingresso Permesso"
+} else {
+    ingresso2 = "Ingresso Vietato"
+}
+console.log(ingresso2)
+
+//struttura di controllo if/else
+
+/* 
+    if(condizione) {
+        //blocco di istruzione
+    } else if {
+        //blocco di istruzione
+    } else if {
+        //blocco di istruzione
+    } else if {
+        //blocco di istruzione
+    } else if {
+        //blocco di istruzione
+    } else {
+        //blocco di istruzione
+    } 
+*/
+
+/* ESEMPIO:
+    if(age < 18) {
+        console.log("hai meno di 18 anni")
+    } else if (age > 18 {
+        console.log("hai più di 18 anni")
+    } else if (age === 18) {
+        console.log ("hai 18 anni")
+    } else {
+        console.log ("Valore non corretto")
+    } 
+*/
+
+
+
+//OPERATORI UNARI
+let j = 5;
+j = j + 1;
+j += 1;
+//ma posso fare direttamente
+j++; //aggiunge +1 a j
