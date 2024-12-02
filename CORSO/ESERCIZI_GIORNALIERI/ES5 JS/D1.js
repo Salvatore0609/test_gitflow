@@ -86,7 +86,7 @@ let disuguaglianza = (name1 !== name2) ? "diverso" : "uguale" ;
 console.log(disuguaglianza)
 
 let uguaglianza
-if (name2.toLowerCase() === name1.toLowerCase()) {
+if (name2.toLowerCase() === name1) {
   uguaglianza = "uguale"
 } else {
   uguaglianza = "diverso"
