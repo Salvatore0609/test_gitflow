@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="elaborazioneForm.java" method="POST" autocomplete="on">
+            <fieldset>
+                <legend>Form</legend>
+                <label for="name">FullName:</label>
+                <!--autofocus fa partire il cursore direttamente su name senza che tu clicchi dentro il campo-->
+                <input type="text" id="name" name="fullname" placeholder="Es. Mario Rossi" autofocus />
+                <br />
+                <label for="myEmail">Email Address:</label>
+                <input type="email" id="myEmail" name="myEmail" placeholder="example@example.ext" />
+                <br />
+                <label for="myPassword">Password:</label>
+                <!--disabled disabilita un campo, quindi lo visualizzi ma non è modificabile-->
+                <!--maxlenght massimo di caratteri, per esempio il massimo di carattere per il codice fiscale-->
+                <!--readonly trasforma l'elemente in un campo di sola lettura-->
+                <!--required ti avvisa di compilare il campo rendendolo obbligatorio-->
+                <input type="password" id="myPassword" name="password" placeholder="*********" disabled />
+                <br />
+                <label for="myAge">Age:</label>
+                <input type="number" id="myAge" name="age" />
+                <br />
+                <label for="myFiscalCode">FiscalCode:</label>
+                <input type="file" id="myFiscalCode" name="fiscalCode" />
+                <br />
+                <label for="myDate">Date:</label>
+                <input type="date" id="myDate" name="date" />
+                <br />
+                Materie Preferite
+                <label for="html">HTML:</label>
+                <!-- checked flegga automaticamente il campo del box-->
+                <input type="checkbox" id="html" name="html" checked />
+                <label for="css">CSS:</label>
+                <input type="checkbox" id="css" name="css" />
+                <label for="js">JS:</label>
+                <input type="checkbox" id="js" name="js" />
+                <br />
+                Materie Preferite
+                <label for="sesso">Sesso:</label>
+                Donna: <input type="radio" id="sesso" name="sesso" value="donna" />
+                Uomo: <input type="radio" id="sesso" name="sesso" value="uomo" />
+                Altro: <input type="radio" id="sesso" name="sesso" value="altro" />
+                <br />
+                <label for="note">Note: </label>
+                <!-- si può dare alla textarea una dimensione inziale -->
+                <textarea id="note" name="note" row="5" cols="50">...</textarea>
+                <br />
+                <label for="scelta">Scegli: </label>
+                <select id="scelta" name="scelta">
+                    <optgroup label="FrontEnd">
+                        <option value="value1">Val 1</option>
+                        <option value="value1">Val 2</option>
+                        <option value="value1">Val 2</option>
+                    </optgroup>
+                    <optgroup label="BackEnd">
+                        <option value="value1">Val 1</option>
+                        <option value="value1">Val 2</option>
+                        <option value="value1">Val 2</option>
+                    </optgroup>
+                </select>
+                <br />
+                <!-- button è un bottone generico -->
+                <button>Invia</button>
+                <input type="submit" value="Invia" />
+                <input type="reset" value="Reimposta" />
+                <input type="hidden" id="hidden" name="hiddenField" />
+            </fieldset>
+        </form>
+
+
+
+        
+    </div>
+</body>
+
+</html>
