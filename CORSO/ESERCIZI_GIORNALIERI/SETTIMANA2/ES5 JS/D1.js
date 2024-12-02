@@ -12,39 +12,45 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("ESERCIZIO 1")
 console.log("number --> I numeri sono come i numeri che usi per contare. Possono essere interi (come 1, 2, 3) o decimali (come 1.5, 2.75). Puoi fare operazioni come addizione, sottrazione, moltiplicazione e divisione con i numeri.")
 console.log("string --> Le stringhe sono come le parole o le frasi che scrivi. Sono racchiuse tra virgolette e puoi pensare alle stringhe come a un insieme di lettere che formano un messaggio.")
 console.log("boolean --> I booleani sono come i pulsanti di accensione e spegnimento. Possono essere solo true (vero) o false (falso). Sono utili per prendere decisioni, come 'è vero che hai mangiato la torta?' o 'è falso che hai finito i compiti?'.")
 console.log("null --> Null è come dire 'non c'è niente'. Avevamo un scatola piena che abbiamo svuotato e ora non c'è niente.")
 console.log("undefined --> Undefined è come dire 'non è stato ancora deciso'. È un valore speciale che significa che una variabile è stata dichiarata ma non ha ancora un valore.")
-
+console.log("-------------------------------");
 
 /* ESERCIZIO 2
  Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 2");
 let myName = "Salvatore"; 
-console.log(myName)
+console.log("il mio nome è " + myName);
+console.log("-------------------------------");
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("ESERCIZIO 3");
 let num1 = 12;
+//potevo anche num3 = num1 + num2 (dove num2 = 20)
 num1 += 20;
-console.log(num1)  
+console.log(num1);  
+console.log("-------------------------------");
 
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 4");
 let x = 12;
 console.log(x)
+console.log("-------------------------------");
 
 /* ESERCIZIO 5
   Riassegna un nuovo valore alla variabile "myName" già esistente: il tuo cognome.
@@ -52,24 +58,23 @@ console.log(x)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 5");
 myName = "Desole";
 console.log(myName)
 const MYSURNAME = "Desole";
-console.log(MYSURNAME)
-/* 
-MYSURNAME = "Solinas";
-console.log(MYSURNAME) 
-D1.js:59 Uncaught TypeError: Assignment to constant variable.
-at D1.js:59:11 ---> messaggio d'errore della console che dimostra che un const non può cambiare valore 
-*/
+/* MYSURNAME = "Solinas";
+console.log("D1.js:59 Uncaught TypeError: Assignment to constant variable.") */
+console.log("-------------------------------");
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 6");
 x -= 4
 console.log(x)
+console.log("-------------------------------");
 
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
@@ -78,17 +83,21 @@ console.log(x)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let name1 = "john"
-let name2 = "John"
+console.log("ESERCIZIO 7");
+let name1 = "john";
+let name2 = "John";
 console.log(name2)
 
 let disuguaglianza = (name1 !== name2) ? "diverso" : "uguale" ;
 console.log(disuguaglianza)
+console.log("-------------------------------");
 
-let uguaglianza
+console.log("EXTRA");
+let uguaglianza;
 if (name2.toLowerCase() === name1) {
   uguaglianza = "uguale"
 } else {
   uguaglianza = "diverso"
 }
 console.log(uguaglianza) //dove "John diventa john"
+console.log("-------------------------------");
