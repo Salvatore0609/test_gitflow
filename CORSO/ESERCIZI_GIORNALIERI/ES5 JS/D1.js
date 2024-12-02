@@ -13,11 +13,11 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 /* 
-number
-string
-boolean
-null
-undefined 
+number --> I numeri sono come i numeri che usi per contare. Possono essere interi (come 1, 2, 3) o decimali (come 1.5, 2.75). Puoi fare operazioni come addizione, sottrazione, moltiplicazione e divisione con i numeri.
+string --> Le stringhe sono come le parole o le frasi che scrivi. Sono racchiuse tra virgolette singole (') o doppie ("). Puoi pensare alle stringhe come a un insieme di lettere che formano un messaggio.
+boolean --> I booleani sono come i pulsanti di accensione e spegnimento. Possono essere solo true (vero) o false (falso). Sono utili per prendere decisioni, come "è vero che hai mangiato la torta?" o "è falso che hai finito i compiti?".
+null --> Null è come dire "non c'è niente". Avevamo un scatola piena che abbiamo svuotato e ora non c'è niente.
+undefined --> Undefined è come dire "non è stato ancora deciso". È un valore speciale che significa che una variabile è stata dichiarata ma non ha ancora un valore.
 */
 
 /* ESERCIZIO 2
