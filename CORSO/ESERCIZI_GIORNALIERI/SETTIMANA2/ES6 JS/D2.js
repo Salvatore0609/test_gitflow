@@ -19,9 +19,8 @@ if (num2 > num) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let numI = 5;
-let numI2 =10;
-if (numI2 !== numI) {
+let numI =10;
+if (numI !== 5) {
   console.log("not equal")
 } else {
   console.log("equal")
