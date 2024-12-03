@@ -19,9 +19,9 @@ if (num2 > num) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let numI =10;
+let numI = 10;
 if (numI !== 5) {
-  console.log("not equal")
+  console.log(numI + " not equal 5")
 } else {
   console.log("equal")
 }
@@ -33,15 +33,15 @@ if (numI !== 5) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 //se restituisce numeri interi e non decimali funziona, non c'è una differenza di resto.
 if (10 % 5 === 0) { 
-  console.log("divisibile per 5")
+  console.log(10 + " è divisibile per 5")
 } else {
-  console.log("non divisibile per 5")
+  console.log(10 + " non è divisibile per 5")
 }
 
 if (12 % 5 === 0) { 
-  console.log("divisibile per 5")
+  console.log(12 + " è divisibile per 5")
 } else {
-  console.log("non divisibile per 5")
+  console.log(12 + " non è divisibile per 5")
 }
 
 /* ESERCIZIO 4
@@ -49,16 +49,12 @@ if (12 % 5 === 0) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let value = 8;
-if (8 === value) {
-  console.log("il valore è 8")
+let value = 4;
+let value1 = 12;
+if (8 === value || value1 === 8 || (value+value1) === 8 || (value-value1) === 8 || (value1-value) === 8) {
+  console.log("algoritmo verificato: almeno un valore è uguale 8")
 }
-//oppure
-let value1 = 3;
-let value2 = 5;
-if (value1 + value2 === 8) {
-  console.log("il valore è 8")
-}
+
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
