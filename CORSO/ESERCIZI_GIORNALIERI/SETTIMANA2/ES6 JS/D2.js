@@ -63,7 +63,7 @@ if (8 === value || value1 === 8 || (value+value1) === 8 || (value-value1) === 8 
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/* 
+ 
 let totalShoppingCart = 64; //ipotizziamo
 const spedizione = 10;
 let maxTotCarello = 50;
@@ -79,7 +79,7 @@ if (totalShoppingCart > maxTotCarello) {
 } else {
   console.log("paghi la spedizione, l'ammontare è: " + (totalShoppingCart + spedizione))
 } 
-*/
+
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -87,21 +87,21 @@ if (totalShoppingCart > maxTotCarello) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let totalShoppingCart = 64; //ipotizziamo
-const spedizione = 10;
-let maxTotCarello = 50;
+let totalShoppingCart2 = 64; //ipotizziamo
+const spedizione2 = 10;
+let maxTotCarello2 = 50;
 let scontoBlackFriday = totalShoppingCart * 20 / 100;
-if (totalShoppingCart - scontoBlackFriday > maxTotCarello) {
-  console.log("spedizione gratuita, l'ammontare totale è: " + (totalShoppingCart - scontoBlackFriday))
+if (totalShoppingCart2 - scontoBlackFriday > maxTotCarello2) {
+  console.log("spedizione gratuita, l'ammontare totale è: " + (totalShoppingCart2 - scontoBlackFriday))
 } else {
-  console.log("paghi la spedizione, l'ammontare è: " + (totalShoppingCart - scontoBlackFriday + spedizione))
+  console.log("paghi la spedizione, l'ammontare è: " + (totalShoppingCart2 - scontoBlackFriday + spedizione2))
 }
 //invece se
-totalShoppingCart = 32;
-if (totalShoppingCart - scontoBlackFriday > maxTotCarello) {
-  console.log("spedizione gratuita, l'ammontare totale è: " + (totalShoppingCart - scontoBlackFriday))
+totalShoppingCart2 = 32;
+if (totalShoppingCart2 - scontoBlackFriday > maxTotCarello2) {
+  console.log("spedizione gratuita, l'ammontare totale è: " + (totalShoppingCart2 - scontoBlackFriday))
 } else {
-  console.log("paghi la spedizione, l'ammontare è: " + (totalShoppingCart - scontoBlackFriday + spedizione))
+  console.log("paghi la spedizione, l'ammontare è: " + (totalShoppingCart2 - scontoBlackFriday + spedizione2))
 }
 
 /* ESERCIZIO 7
@@ -115,6 +115,18 @@ const var3 = [27, 11, 33];
 console.log(var3);
 var3.sort((a, b) => b - a); //arrow function
 console.log(var3);
+
+//potevo farla anche
+let number1 = 10;
+let number2 = 20;
+let number3 = 30;
+if (number3 >= number2) {
+  console.log(number3, number2, number1)
+} else if (number3 >= number1) {
+  console.log(number2, number3, number1)
+} else {
+  console.log(number2, number1, number3)
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
