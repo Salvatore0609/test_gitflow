@@ -7,7 +7,11 @@
 let num = 14;
 let num2 = 64;
 if (num2 > num) {
-  console.log("num2 è il numero più grande: " + num2);
+  console.log("il numero: " + num2 + "è più grande di " + num);
+} else if (num2 < num) {
+  console.log("il numero: " + num + "è più grande di " + num2);
+} else {
+  console.log("il numero: " + num + "è uguale a" + num2);
 }
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
