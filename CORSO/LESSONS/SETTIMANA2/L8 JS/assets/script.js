@@ -39,4 +39,4 @@ console.log(str1.charAt(5))
 
 //.split()
 let arrStr = str.split(" ")
-console.log(str1)
+console.log(arrStr)
