@@ -168,13 +168,15 @@ console.log(femaleCharacters)
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 const eyeColor = {
-  blue: [],
-  yellow: [],
-  brown: [],
-  red: [],
-  blueGray: [],
+  blue:         [],
+  yellow:       [],
+  brown:        [],
+  red:          [],
+  "blue-gray":  [], // qui nella chiave posso mettere uno stringa per dirgli che tutto è una chiave
 }
 console.log(eyeColor);
+
+
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
@@ -194,7 +196,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     eyeColor.red.push(starWarsCharacters[i]);
     break;
     case "blue-gray":
-    eyeColor.blueGray.push(starWarsCharacters[i]);
+    eyeColor["blue-gray"].push(starWarsCharacters[i]);
     break;
     default:
     break;
