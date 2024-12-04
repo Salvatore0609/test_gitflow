@@ -204,6 +204,22 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 }
 console.log(eyeColor);
 
+//soluzione professore
+/* 
+for (const element of starWarsCharacters) {
+  let obj = element
+  switch (obj.eye_color) {
+    case "blue": eyeColor.blue.push(obj); break;
+    case "yellow": eyeColor.yellow.push(obj); break; 
+    case "brown": eyeColor.brown.push(obj); break;
+    case "red": eyeColor.red.push(obj); break; 
+    case "blue-gray": eyeColor["blue-gray"].push(obj); break; 
+    default:
+      break;
+  }
+}
+console.log(eyeColor)
+*/
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
@@ -215,6 +231,19 @@ while (i < starWarsCharacters.length) {
   i++;
 }
 console.log(crewMass);
+
+//soluzione professore
+/* 
+while (i < starWarsCharacters.length) {
+  let obj = starWarsCharacters[i];
+  //massa
+  crewMass += obj.mass;
+  i++;
+} 
+console.log(crewMass);
+
+*/
+
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
@@ -244,10 +273,10 @@ console.log(starWarsCharacters[5].mass);
 //nuova massa del indice(gruppo) 5 dell'array starWarsCharacters
 starWarsCharacters[5].mass = 80;
 console.log(starWarsCharacters[5].mass);
-//vecchia massa del indice(gruppo) 5 dell'array starWarsCharacters
+//vecchia massa del indice(gruppo) 3 dell'array starWarsCharacters
 starWarsCharacters[3].mass;
 console.log(starWarsCharacters[3].mass);
-//nuova massa del indice(gruppo) 5 dell'array starWarsCharacters
+//nuova massa del indice(gruppo) 3 dell'array starWarsCharacters
 starWarsCharacters[3].mass = 80;
 console.log(starWarsCharacters[3].mass); 
 //
@@ -282,19 +311,65 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 }
 console.log(starWarsCharacters);
 
+//soluzione professore
+/*  
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  let obj = starWarsCharacters[1];
+
+  if (obj.gender === "n/a") {
+    obj.gender = "robot";
+  }
+}
+console.log(starWarsCharacters);
+*/
+
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
-console.log(charactersNames.length);
+console.log("BEFORE", charactersNames.length);
 
-for (let i = 0; i < femaleCharacters.length; i++) {
-  if (charactersNames[4] && charactersNames[6] === femaleCharacters.name) {
-    charactersNames.ship(femaleCharacters[i]);
+for (let i = 0; i < charactersNames.length; i++) {
+  const obj = charactersNames[i]
+
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    const obj1 = femaleCharacters[j]
+
+    if (obj1.name === obj) {
+      console.log("FEMALE", obj)
+      charactersNames.splice(i, 1) //i perchè deve controllare tutti gli indici | 1 perchè deve cancellare solo un elemento
+    }
   }
 }
+//ricordare che .splice() serve per togliere un elemento
+console.log("AFTER", charactersNames.length);
 
-console.log(charactersNames.length);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+//Il metodo statico Math.floor() 
+//arrotonda sempre per difetto e restituisce il numero intero più grande inferiore o uguale a un determinato numero.
+//Il metodo statico Math.random() 
+/* restituisce un numero pseudo-casuale a virgola mobile maggiore o uguale a 0 e inferiore a 1, 
+con una distribuzione approssimativamente uniforme su tale intervallo, 
+che puoi quindi ridimensionare fino all'intervallo desiderato. 
+L'implementazione seleziona il seme iniziale per l'algoritmo di generazione di numeri casuali; 
+non può essere scelto o reimpostato dall'utente. */
+const randomIndex = Math.floor(Math.random() * starWarsCharacters.length) 
+const selectedCharacter = starWarsCharacters[randomIndex]
+
+console.log('The found character name is:', selectedCharacter.name)
+
+if (selectedCharacter.gender === 'female') {
+  console.log('She is', selectedCharacter.height, 'cm tall')
+} else {
+  console.log('He is', selectedCharacter.height, 'cm tall')
+}
+
+if (selectedCharacter.hair_color !== 'n/a' && selectedCharacter.hair_color !== 'none') {
+  console.log('and has', selectedCharacter.hair_color, 'hair,')
+} else {
+  console.log('and bald,')
+}
+
+console.log('with', selectedCharacter.skin_color, 'skin.')
