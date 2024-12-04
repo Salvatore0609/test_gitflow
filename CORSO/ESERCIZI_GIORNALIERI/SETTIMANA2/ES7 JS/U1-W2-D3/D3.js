@@ -145,7 +145,6 @@ console.log(eyeColor);
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 //apro un for per iterare e con lo switch inserisco gli elementi con la proprietà richiesta nel array coloreOcchi richiesto.
-//esercizio che mi ha dato più problemi
 for (let i = 0; i < starWarsCharacters.length; i++) {
   switch (starWarsCharacters[i].eye_color) {
     case "blue": eyeColor.blue.push(starWarsCharacters[i]);
