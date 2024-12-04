@@ -355,21 +355,24 @@ con una distribuzione approssimativamente uniforme su tale intervallo,
 che puoi quindi ridimensionare fino all'intervallo desiderato. 
 L'implementazione seleziona il seme iniziale per l'algoritmo di generazione di numeri casuali; 
 non può essere scelto o reimpostato dall'utente. */
-const randomIndex = Math.floor(Math.random() * starWarsCharacters.length) 
+
+const randomIndex = Math.floor(Math.random() * starWarsCharacters.length)
+//Qui creiano una variabile costante che ha valore la formula della scelta random su sarWarsCharacters
 const selectedCharacter = starWarsCharacters[randomIndex]
 
 console.log('The found character name is:', selectedCharacter.name)
 
+//SE il character scelto è di genere femmina diamo un risultato se no l'altro.
 if (selectedCharacter.gender === 'female') {
   console.log('She is', selectedCharacter.height, 'cm tall')
 } else {
   console.log('He is', selectedCharacter.height, 'cm tall')
 }
-
+//SE il character scelto non ha un hair_color = n/a AND = none allora diamo un risultato se no l'altro.
 if (selectedCharacter.hair_color !== 'n/a' && selectedCharacter.hair_color !== 'none') {
   console.log('and has', selectedCharacter.hair_color, 'hair,')
 } else {
   console.log('and bald,')
 }
-
+//console.log per stampare il colore della pelle
 console.log('with', selectedCharacter.skin_color, 'skin.')
