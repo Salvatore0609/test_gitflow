@@ -104,7 +104,7 @@ const starWarsCharacters = [
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
-let charactersNames = [];
+const charactersNames = [];
 
 
 /* ESERCIZIO 2
@@ -116,10 +116,31 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   charactersNames.push(starWarsCharacters[i].name);
 }
 console.log(charactersNames)
+
+//soluzione professore
+/* 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  let obj = starWarsCharacters[i];
+  charactersNames.push(obj.name)
+}
+
+for (const key in starWarsCharacters) {
+  let obj = starWarsCharacters[key];
+  charactersNames.push(obj.name)
+}
+
+for (const element of starWarsCharacters) {
+  let obj = element
+  charactersNames.push(obj.name)
+} 
+console.log(characterNames)
+*/
+
+
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
-let femaleCharacters = [];
+const femaleCharacters = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "female") {
@@ -128,11 +149,25 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 }
 console.log(femaleCharacters)
 
+//soluzione professore
+/* 
+for (const key in starWarsCharacters) {
+  let obj = starWarsCharacters[key];
+  
+  //gender: "female"
+  if(obj.gender === "female") {
+    femaleCharacters.push(obj)
+  }
+}
+console.log(femaleCharacters)
+*/
+
+
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
-let eyeColor = {
+const eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
