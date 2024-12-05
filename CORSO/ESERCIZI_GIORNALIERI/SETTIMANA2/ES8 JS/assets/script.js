@@ -3,12 +3,16 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function area(x, y) {
-    let areaR = x * y
-    return areaR;
+/* 
+function area() {}
+const area = function() {}
+const area = () => {} 
+*/
+function area(b, a) {
+    return b * a;
 }
-let totArea = area(11, 12);
-console.log(totArea);
+let resultArea = area(4, 2);
+console.log("L'area del rettangolo è: " + resultArea);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
