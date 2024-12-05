@@ -209,7 +209,7 @@ console.log(globalVar)
 // Classe Math
 // random - ceil - floor - round - min - max
 
-let randNum = Math.random() * 100
+let randNum = Math.random() * 100 //da 0 (incluso) a 100(escluso)
 let ceilNum = Math.ceil(randNum)
 let floorNum = Math.floor(randNum)
 let roundNum = Math.round(randNum)
