@@ -13,7 +13,7 @@ console.log(str.lastIndexOf("a")) //stamperà l'ultima occorrenza che incontra
 
 //.slice() accetta fino a due parametri, inizio e fine.. se do solo un parametro taglia dall'indice i in poi
 console.log(str.slice(2, 9)); //taglia una stringa dall'indice 2 a 9
-console.log(str.slice(2)); //taglia una stringa dall'indice 2 a 9
+console.log(str.slice(2)); //taglia una stringa dall'indice 2 in poi
 
 //.substring() è simile a slice ma non accetta l'idicazione di posizione negativa.
 
