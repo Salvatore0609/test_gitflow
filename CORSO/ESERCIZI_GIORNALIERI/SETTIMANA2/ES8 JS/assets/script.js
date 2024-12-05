@@ -99,6 +99,7 @@ console.log(str1);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function check3and7 (num) {
+    /* return (num > 0 && (num % 3 === 0 || num % 7 === 0))  */
     if (num > 0 && (num % 3 === 0 || num % 7 === 0)) {
         return num + " è un multiplo di 3 e 7"
     } else {
@@ -117,6 +118,8 @@ console.log(result2);
 /* SCRIVI QUI LA TUA RISPOSTA */
 function reverseString(string) {
     let splitS = string.split(""); // Converti la stringa in un array di caratteri
+    // qui potevo utilizzare un ciclo --> for (let i = arrStr.length; i>0; i--) {strReverse += splitS[i-1]}
+    //così mi dava ogni carattere della stringa dall'ultima alla prima
     let reverseS = splitS.reverse(); // Inverte l'array
     let joinS = reverseS.join(""); // Unisci l'array di nuovo in una stringa
     return joinS; // Restituisci la stringa invertita
