@@ -60,7 +60,7 @@ console.log(diffAbs1); // Dovrebbe stampare 18 (poiché (8 - 19) = -11 ---> asso
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function boundary (n) {
-    if (n > 20 && n <= 100 || n === 400) {
+    if (n >= 20 && n <= 100 || n === 400) {
         return true
     } else {
         return false
