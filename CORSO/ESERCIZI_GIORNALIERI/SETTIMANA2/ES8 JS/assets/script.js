@@ -134,12 +134,12 @@ console.log(reverseStr); // Output: "oaiC"
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function upperFirst(str4) {
-    let words = str4.split(" ");
+    let words = str4.split(" "); //separa ogni volta che incontra uno spazio primaParola[0] seconda parola[1] ecc
 
     for (let i = 0; i < words.length; i++) {
-        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1); //.slice(1) mi tagli il resto della parola per far cadere i comandi precedenti solo sulla prima lettera
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1); //.slice(1) mi tagli il resto della parola per far cadere i comandi precedenti solo sulla 1° lettera
     }                                                                    
-    return words.join(" ");
+    return words.join(" ");// riunite insieme con uno spazio tra una e l'altra
 }
 let upperFirstStr4 = upperFirst("ciao mi chiamo salvatore desole")
 console.log(upperFirstStr4)
