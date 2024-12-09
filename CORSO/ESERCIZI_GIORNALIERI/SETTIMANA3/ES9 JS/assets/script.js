@@ -3,12 +3,14 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 function concatString(string, string1) {
-  let newString = string.slice(2);
+  /* let newString = string.slice(0, 2);
   let newString1 = string1.slice(-3);
-  let result = newString.concat(newString1).toUpperCase();
-  console.log(result)
+  let result = newString.concat(newString1).toUpperCase(); */
+  return string.slice(0, 2).concat(string1.slice(-3)).toUpperCase()
+  /* console.log(result) */
 }
 let totString = concatString("Ciao", "Buongiorno");
+console.log(totString);
 
 
 /* ESERCIZIO 2 (for)
@@ -201,15 +203,19 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-let funcOldFilm = movies.forEach(elt => console.log(Math.min(...Year)));
+/* let funcOldFilm = movies.forEach(elt => console.log(Math.min(...Year))); */
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+let arrLength = movies.map(movies => movies.length);
+console.log(arrLength);
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+let arrTitle = movies.map(movies => movies.Title);
+console.log(arrTitle)
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
