@@ -2,35 +2,85 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+function concatString(string, string1) {
+  let newString = string.slice(2);
+  let newString1 = string1.slice(-3);
+  let result = newString.concat(newString1).toUpperCase();
+  console.log(result)
+}
+let totString = concatString("Ciao", "Buongiorno");
+
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+function randomArray() {
+  const arr = [];
+
+  for (let i = 0; i < 10; i++) {
+    let randomNumber = Math.floor(Math.random() * 101); 
+    
+    arr.push(randomNumber);
+  }
+  return arr;
+}
+let newArray = randomArray();
+console.log(newArray);
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+let arrFilter = newArray.filter(elt => elt % 2 === 0);
+console.log(arrFilter);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+let sum = 0
+let arrEach = newArray.forEach(elt => console.log(sum += elt));
+console.log(sum)
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+let sum1 = newArray.reduce((acc, elt) => acc + elt, 0)
+console.log(sum1);
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+let arrMod = newArray.map(elt => elt + 2) //incremento di 2 per ogni elemento dell'array
+console.log(arrMod)
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+let arrString = ["EPICODE", "is", "great"];
+let arrlength = arrString.map(string => string.length);
+console.log(arrlength)
+
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+//difficilissimo
+function generateArrayOdd() {
+    let arrNumber = []
+
+  for (let i = 1; i <= 99; i++) {
+  arrNumber.push(i);
+  }
+  
+  let arrOdd = [];
+
+  arrNumber.forEach(elt => {if (elt % 2 !== 0) {arrOdd.push(elt);} } );
+
+  return arrOdd
+}
+let result = generateArrayOdd();
+console.log(result);
+
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -151,6 +201,7 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+let funcOldFilm = movies.forEach(elt => console.log(Math.min(...Year)));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
