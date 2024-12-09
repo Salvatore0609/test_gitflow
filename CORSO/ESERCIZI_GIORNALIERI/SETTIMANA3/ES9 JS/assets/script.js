@@ -78,22 +78,6 @@ return dispArr
 }
 console.log(generateArrayOdd(newArr))
 
-/* function generateArrayOdd() {
-    let arrNumber = []
-
-  for (let i = 1; i <= 99; i++) {
-  arrNumber.push(i);
-  }
-  
-  let arrOdd = [];
-
-  arrNumber.forEach(ele => {if (ele % 2 !== 0) {arrOdd.push(ele);} } );
-
-  return arrOdd
-}
-let result = generateArrayOdd();
-console.log(result); */
-
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
