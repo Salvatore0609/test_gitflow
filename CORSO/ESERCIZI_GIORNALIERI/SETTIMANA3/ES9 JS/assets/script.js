@@ -16,42 +16,43 @@ console.log(totString);
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
-function randomArray() {
+function randomArray(n) {
   const arr = [];
 
-  for (let i = 0; i < 10; i++) {
-    let randomNumber = Math.floor(Math.random() * 101); 
+  for (let i = 0; i < n; i++) {
+    let randomNum = Math.floor(Math.random() * 101); 
     
-    arr.push(randomNumber);
+    arr.push(randomNum);
   }
   return arr;
 }
-let newArray = randomArray();
-console.log(newArray);
+const newArr = randomArray(10)
+console.log(newArr);
+
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
-let arrFilter = newArray.filter(elt => elt % 2 === 0);
-console.log(arrFilter);
+let pariArr = newArr.filter(ele => ele % 2 === 0);
+console.log("Questi sono i numeri pari dell'array: " + pariArr);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 let sum = 0
-let arrEach = newArray.forEach(elt => console.log(sum += elt));
+let arrEach = newArr.forEach(ele => sum += ele);
 console.log(sum)
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-let sum1 = newArray.reduce((acc, elt) => acc + elt, 0)
+let sum1 = newArr.reduce((acc, ele) => acc + ele, 0)
 console.log(sum1);
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
-let arrMod = newArray.map(elt => elt + 2) //incremento di 2 per ogni elemento dell'array
+let arrMod = newArr.map(ele => ele + 2) //incremento di 2 per ogni elemento dell'array
 console.log(arrMod)
 
 /* ESERCIZIO 7 (map)
@@ -59,15 +60,25 @@ console.log(arrMod)
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 let arrString = ["EPICODE", "is", "great"];
-let arrlength = arrString.map(string => string.length);
+let arrlength = arrString.map(ele => ele.length);
 console.log(arrlength)
-
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 //difficilissimo
 function generateArrayOdd() {
+  const dispArr = []
+newArr.forEach(ele => {
+  if (ele % 2 !== 0) {
+    dispArr.push(ele)
+  }
+})
+return dispArr
+}
+console.log(generateArrayOdd(newArr))
+
+/* function generateArrayOdd() {
     let arrNumber = []
 
   for (let i = 1; i <= 99; i++) {
@@ -76,12 +87,12 @@ function generateArrayOdd() {
   
   let arrOdd = [];
 
-  arrNumber.forEach(elt => {if (elt % 2 !== 0) {arrOdd.push(elt);} } );
+  arrNumber.forEach(ele => {if (ele % 2 !== 0) {arrOdd.push(ele);} } );
 
   return arrOdd
 }
 let result = generateArrayOdd();
-console.log(result);
+console.log(result); */
 
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
@@ -203,7 +214,17 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-/* let funcOldFilm = movies.forEach(elt => console.log(Math.min(...Year))); */
+//difficile
+/* let funcOldFilm = movies.forEach(ele => console.log(Math.min(...Year))); */
+function oldFilm(arr) {
+  let film = {year: 5000};
+  arr.forEach ( f => {
+    if(film.Year > f.Year) {
+      film = f}
+    })  
+    return film
+  }
+console.log(oldFilm(movies))
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
