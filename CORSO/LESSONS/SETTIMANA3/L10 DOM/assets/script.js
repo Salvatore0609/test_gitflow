@@ -68,8 +68,8 @@ p[1].style.textAlign = "center"
 let parag = document.querySelector("div > p") //nel caso di id #blabla oppure per la classe .blabla
 parag.style.fontWeight = "bold"
 
-let allParag = document.querySelectorAll("div > p")
-/* allParag.style.fontStyle = "italic" */
+let allParag = document.querySelectorAll("div p")
+allParag.style.fontStyle = "italic" 
 console.log(allParag)
 
 //Creare nuovi nodi html tramite JS
