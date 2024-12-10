@@ -78,7 +78,6 @@ return dispArr
 }
 console.log(generateArrayOdd(newArr))
 
-
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
