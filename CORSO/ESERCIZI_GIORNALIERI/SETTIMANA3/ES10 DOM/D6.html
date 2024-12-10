@@ -35,7 +35,7 @@
 
   <body>
     <div>
-      <h1 onclick = "makeItClickable()">Questo è il titolo della pagina</h1>
+      <h1>Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
 
@@ -70,7 +70,7 @@
 
     <div id="tableArea"></div>
 
-    <footer onclick="revealFooterLink()">
+    <footer>
       <h3>
         DOM Manipulation is super
         <a
@@ -85,9 +85,8 @@
     */
 
       const changeTitle = function () {
-        let t = document.querySelector("h1")
+        let t = document.querySelector("div h1")
         t.innerText = "Testo modificato tramite JS"
-        console.log(t)
       }
       changeTitle()
 
@@ -96,8 +95,9 @@
     */
 
       const addClassToTitle = function () {
-        let tClass = document.querySelector("h1")
-        tClass.classList.add("myHeading")
+        let tClass = document.querySelector("div h1")
+        tClass.className = ("myHeading") //se ha già una classe la scambia
+        //title.classList.add("myHeading") //questa la aggiunge //all posto di .add ho altri metodi che posso usare
       }
       addClassToTitle()
 
@@ -106,8 +106,10 @@
       */
 
       const changePcontent = function () {
-        let p = document.querySelector("div p")
-        p.innerText = "Nuovo testo per tutti i p figli di un div"
+        let allP = document.querySelectorAll("div > p") // div > p (figli di un div) | div p (discendente di un div)
+        allP.forEach(ele => {
+          ele.innerText = "Nuovo testo per tutti i p figli di un div"
+        })
       }
       changePcontent()
 
@@ -116,10 +118,13 @@
       */
 
       const changeUrls = function () {
-        let u = document.querySelector("div a")
-        u.innerText = "Questo link porta a google"
-        u.href = "http://www.google.com"
-        u.target = "_blank"
+        let u = document.querySelectorAll("a:not(footer a)") //a:not(footer a) tutti tranne quello nel footer
+        //ciclo per selezionarli tutti
+        u.forEach(ele => {
+          ele.href ="http://www.google.com"
+          ele.innerText = "Questo link porta a google"
+          ele.target = "_blank"
+        })
       }
       changeUrls()
 
@@ -130,7 +135,7 @@
       const addToTheSecond = function () {
         let ul = document.querySelector("#secondList");
         let newLi = document.createElement("li");
-        newLi.textContent = "ciao sono un nuovo elemento lista"
+        newLi.innerText = "ciao sono un nuovo elemento lista"
         ul.appendChild(newLi);
       }
       addToTheSecond()
@@ -140,20 +145,22 @@
     */
 
       const addParagraph = function () {
-        let pgf = document.querySelector("body div")
+        /* let allDiv = document.querySelectorAll("div")
+        let div = allDiv[0] */
+        let div = document.body.firstElementChild
         let newP = document.createElement("p")
-        newP.textContent = "ciao sono un nuovo paragrafo"
-        pgf.appendChild(newP);
+        newP.innerText = "ciao sono un nuovo paragrafo"
+        div.appendChild(newP);
       }
       addParagraph()
 
       /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
     */
-
-      const hideFirstUl = function () {
+        const hideFirstUl = function () {
         let ul = document.querySelector("#firstList")
-        ul.style.display = "none";
+        /* ul.style.display = "none"; */
+        firstList.remove()
       }
       hideFirstUl()
 
@@ -164,8 +171,8 @@
       const paintItGreen = function () {
       let allUl = document.querySelectorAll("ul");
 
-        allUl.forEach((ul) =>  {
-        ul.style.backgroundColor = "green";
+        allUl.forEach(ele =>  {
+        ele.style.backgroundColor = "green";
         });
       }
       paintItGreen()
@@ -176,8 +183,10 @@
 
       const makeItClickable = function () {
         let h1 = document.querySelector("h1");
-        let t = h1.textContent;
-        h1.textContent = t.slice(0, -1) // mi toglie in automatico una lettera dall'inizio, perchè?
+        h1.style.cursor = "pointer"
+        h1.onclick = function() {
+          h1.innerText = h1.innerText.slice(0, -1)
+        }
       }
       makeItClickable()
 
@@ -187,9 +196,12 @@
 
       const revealFooterLink = function () {
         let f = document.querySelector("footer");
-        let link = f.querySelector("a");
-        let url = link.href;
-        alert(url);
+        f.style.cursor = "pointer"
+        f.onclick = function () {
+          let link = document.querySelector("footer a")
+          let txt = link.href
+          alert(txt) 
+        }
       }
       revealFooterLink()
 
@@ -198,73 +210,41 @@
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
       
-      const generateTable = function () {
-        let tableArea = document.querySelector("#tableArea");
-        tableArea.appendChild("table")
+    const generateTable = function () {
+        let div = document.querySelector('#tableArea');
+        let table = document.createElement('table')
+        /* table.innerHTML = `
+          <tr>
+            <th>immagine</th>
+            <th>nome prodotto</th>
+            <th>quantità</th>
+            <th>prezzo</th>
+          </tr>
+          <tr>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+            <td>abc</td>
+          </tr>
+        ` */
 
-        let table = document.createElement("table")
-        table.style.border = "1px solid black"
-/* 
-        let tr1 = document.createElement("tr")
-        table.appendChild(tr1)
-        let th1 = document.createElement("th")
-        th1.textContent = "immagine"
-        tr1.appendChild(th1)
+        let arrObj = [{
+          img: 'https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQqgIxwJ2WQ7Lakca2aSPIiYiqq7i_RHB5mvGqWg-bzDbGO1Z_DQeKL5iorXn9QrAkwLc1iJBxS33dhRFjfvIk',
+          nome: 'Test',
+          quantita: 3,
+          prezzo: 25
+        }]
 
-        let th2 = document.createElement("th")
-        th2.textContent = "nome prodotto" 
-        tr1.appendChild(th2)
-
-        let th3 = document.createElement("th")
-        th3.textContent = "quantità"
-        tr1.appendChild(th3)
-
-        let th4 = document.createElement("th")
-        th4.textContent = "prezzo"
-        tr1.appendChild(th4)
-
-
-        let tr2 = document.createElement("tr")
-        table.appendChild(tr2)
-
-        let td1 = document.createElement("td")
-        tr2.appendChild(td1)
-        let td2 = document.createElement("td")
-        tr2.appendChild(td2)
-        let td3 = document.createElement("td")
-        tr2.appendChild(td3)
-        let td4 = document.createElement("td")
-        tr2.appendChild(td4)
-
-
-        let tr3 = document.createElement("tr")
-        table.appendChild(tr3)
-
-        let td5 = document.createElement("td")
-        tr3.appendChild(td5)
-        let td6 = document.createElement("td")
-        tr3.appendChild(td6)
-        let td7 = document.createElement("td")
-        tr3.appendChild(td7)
-        let td8 = document.createElement("td")
-        tr3.appendChild(td8)
-
-
-        let tr4 = document.createElement("tr")
-        table.appendChild(tr4)
-
-        let td9 = document.createElement("td")
-        tr4.appendChild(td9)
-        let td10 = document.createElement("td")
-        tr4.appendChild(td10)
-        let td11 = document.createElement("td")
-        tr4.appendChild(td11)
-        let td12 = document.createElement("td")
-        tr4.appendChild(td12)
-
-         */
+        for(let i=0; i<5; i++){
+          let tr = document.createElement('tr');
+          let td = document.createElement('td')
+          td.innerHTML = '<img src="'+ arrObj[i].img +'" />' 
+          tr.appendChild(td)
+          table.appendChild(tr)
+        }
+        div.appendChild(table)
       }
-      generateTable() //con il prof
+      generateTable()
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
