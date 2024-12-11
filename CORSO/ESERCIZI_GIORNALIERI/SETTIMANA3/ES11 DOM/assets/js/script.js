@@ -72,7 +72,7 @@ function userListCreated() {
 
 //AGGIUNGERE NOME ------------------------------------------------------------
 
-//BARRARE NOME
+//BARRARE NOME ---------------------------------------------------------------
 // Funzione per gestire il click sui nomi della lista
 function completedElement() {
     let listElements = document.querySelectorAll('main section ol li');
@@ -89,11 +89,11 @@ function completedElement() {
         });
     });
 }
-//BARRARE NOME
+//BARRARE NOME ---------------------------------------------------------------
 
-//RIMUOVERE CON X ---------------------
+//RIMUOVERE CON X ------------------------------------------------------------
 function removeUser(index) {
     users.splice(index, 1)
     userListCreated()
 }
-//RIMUOVERE CON X ---------------------
+//RIMUOVERE CON X ------------------------------------------------------------
