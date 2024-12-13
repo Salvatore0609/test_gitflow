@@ -1,6 +1,11 @@
 function createCells(num) {
     let tabellone = document.querySelector("#tabellone");
 
+
+    let container = document.createElement("div");
+    container.classList = "containerN"
+    tabellone.appendChild(container)
+
     for (let i = 1; i <= num; i++) {
         let cellNode = document.createElement("div");
         cellNode.classList = "numero";
@@ -9,7 +14,7 @@ function createCells(num) {
         numero.innerText = i;
 
         cellNode.appendChild(numero);
-        tabellone.appendChild(cellNode);
+        container.appendChild(cellNode);
     }
 }
 
@@ -65,7 +70,7 @@ function createCells2 (num) {
     for(let i=1; i<=num; i++){
 
         let cellNode = document.createElement("div")
-        cellNode.classList = "numero"
+        cellNode.classList = "numeroTabellina"
 
 
         let numero = document.createElement("h3")
