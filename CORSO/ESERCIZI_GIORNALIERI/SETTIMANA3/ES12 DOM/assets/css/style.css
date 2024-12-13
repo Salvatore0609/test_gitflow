@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body {
@@ -28,22 +28,39 @@ body {
     color: #ebebeb;
     border: 20px solid rgb(255, 132, 0);
     border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 
-#tabellone div {
-    border-radius: 10%; 
-    /* width: 50px;
-    height: 50px; */
+.containerN {
+    margin: 0 auto;
+    display: inline-block; 
 }
 
 /* classe creata in js */
 .numero {
+   /*  border-radius: 10%; 
     color: rgb(255, 132, 0);
-    width: 14.28%;
-    height: 100px;
+    width: 50px;
+    height: 50px; 
+    padding-top: 10px;
+    font-size: 1.5rem;
     display: inline-block;
-    cursor: pointer; /* trasforma il cursore in mano quando passa sulle celle */
+    text-align: center;
+    cursor: pointer; 
+    margin: 0 auto; */
+    display: inline-block;
+    color: rgb(255, 132, 0);
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    padding: 1em; 
 }
+
+.numero h3 {
+    margin: 0;
+    
+} 
 
 .numero:hover {
     background-color: #c4c4c7; /* quando passi sopra le celle cambia colore */
@@ -56,12 +73,6 @@ body {
     color: #ebebeb; 
 }
 
-
-.numero h3 {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 1.5em;
-}
 
 h1 {
     margin-top: 1rem;
@@ -71,50 +82,49 @@ h1 {
 }
 
 
-#tabellina {
+/* #tabellina {
     background-color: #ffffff;
     color: #ebebeb;
     border: 20px solid rgb(255, 132, 0);
     border-radius: 10px;
-}
+} */
 
-#tabellina div {
+/* #tabellina div {
     border-radius: 10%; 
-}
+} */
 
 /* classe creata in js */
-.numero {
+/* .numeroTabellina {
     color: rgb(255, 132, 0);
     width: 14.28%;
     height: 100px;
     display: inline-block;
-    cursor: pointer; /* trasforma il cursore in mano quando passa sulle celle */
-}
+    cursor: pointer; 
+} */
 
-.numero:hover {
-    background-color: #c4c4c7; /* quando passi sopra le celle cambia colore */
+/* .numero:hover {
+    background-color: #c4c4c7; 
     color: #ebebeb
-}
+} */
 
-/* quando viene estratto */
-.estratto {
-    background-color:  orangered; /* Colore quando il numero è estratto */
+/* .estratto {
+    background-color:  orangered; 
     color: #ebebeb; 
 }
+ */
 
-
-.numero h3 {
+/* .numero h3 {
     text-align: center;
     padding-top: 10px;
     font-size: 1.5em;
-}
+} */
 
-h2 {
+/* h2 {
     margin-top: 1rem;
     margin-bottom: 0;
     font-size: 3rem;
     font-weight: 900;
-}
+} */
 
 /* ---------------------- */
 
@@ -151,4 +161,3 @@ h2 {
     color: #ebebeb;
 }
 
-/* --------------- */
