@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    background-color: antiquewhite;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #612406;
+}
+
+.fade-in {
+  animation: fadeIn 3s both;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  background-color: #ebebeb;
+  padding: 1rem;
+}
+
+.rectangle {
+  /* min-height: 60px; */
+  width: 150px;
+}
+
+.aqua {
+  background-color: aqua;
+}
+.coral {
+  background-color: coral;
+}
+.crimson {
+  background-color: crimson;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: yellow;
+  }
+
+  10% {
+    background-color: coral;
+  }
+
+  25% {
+    transform: scale(1.15);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: blue;
+    color: white;
+  }
+}
+
+.rectangle.n1 {
+  animation: colorChange 3s infinite alternate both;
+}

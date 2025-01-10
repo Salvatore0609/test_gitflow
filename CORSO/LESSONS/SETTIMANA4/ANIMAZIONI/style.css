@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #612406;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  background-color: #ebebeb;
+  padding: 1rem;
+}
+
+.rectangle {
+  /* min-height: 60px; */
+  width: 300px;
+}
+
+.aqua {
+  background-color: aqua;
+}
+.coral {
+  background-color: coral;
+}
+.crimson {
+  background-color: crimson;
+}
+
+.rectangle.n1 {
+  transform: translate(10px, 20px);
+}
+.rectangle.n2 {
+  transform: rotate(10deg);
+  transform-origin: top right;
+}
+.rectangle.n3 {
+  transform: skew(30deg);
+}
+.rectangle.n4 {
+  transform: scale(0.8);
+}
+.rectangle.n5 {
+  transform: perspective(1000px) translateZ(440px);
+}
+.rectangle.n6 {
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+.rectangle.n7 {
+  transform: perspective(1000px) rotateY(87deg) scale3d(1, 1, 3.4);
+  transform-style: preserve-3d;
+}
+.rectangle.n7 .child:first-of-type {
+  transform: perspective(1000px) rotateY(55deg);
+}
+.rectangle.n7 .child:nth-of-type(2) {
+  transform: perspective(1000px) rotateY(105deg);
+}

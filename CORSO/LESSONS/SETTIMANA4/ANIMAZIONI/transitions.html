@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./transitions.css">
+
+    <style>
+
+    </style>
+    <title>Transforms</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Translate</h2>
+        <div class="rectangle aqua n1">translate</div>
+    </div>
+
+    <div class="card">
+
+        <div class="img-wrapper">
+            <img src="https://plus.unsplash.com/premium_photo-1672115680958-54438df0ab82?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+
+            <h3>Mountain</h3>
+        </div>
+
+        <div class="card-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tempora commodi voluptas facere magni ab
+                libero harum expedita ratione tenetur, perferendis itaque porro debitis! Reiciendis beatae nesciunt
+                necessitatibus porro. Odit.</p>
+            <button>click me</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        const rectangle1 = document.querySelector(".rectangle:first-of-type")
+
+        rectangle1.onclick = function () {
+            rectangle1.classList.toggle("width-1000")
+        }
+    </script>
+</body>
+
+</html>
