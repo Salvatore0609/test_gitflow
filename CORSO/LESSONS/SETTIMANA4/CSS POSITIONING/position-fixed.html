@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-fixed</title>
+
+    <link rel="stylesheet" href="./position.css">
+
+    <style>
+        body {
+            min-height: 200vh;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .box.aqua {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .box span {
+            height: 20px;
+            width: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0px;
+            margin: auto;
+        }
+
+        .box.coral {
+            position: relative;
+        }
+
+        .box.coral::before {
+            background-color: black;
+            content: "";
+            /* obbligatorio avere content, anche se vuoto */
+
+            width: 4px;
+            /* la width determina lo spessore della linea */
+
+            /* posizioniamo l'elemento in absolute, con coordinate tutte a 0 */
+            position: absolute;
+            /* left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0; */
+
+            /* inset è l'abbreviazione di tutte e 4 le coordinate */
+
+            inset: 0;
+            /* margin auto serve a centrare un elemento, in questo caso verrà centrato solo sull'asse x, perché nell'asse y sta già occupando l'intero spazio */
+            margin: auto;
+        }
+
+        .box.coral::after {
+            background-color: black;
+            content: "";
+            height: 4px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        /* INIZIO GESTIONE FIXED */
+
+        .chat-bubble {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: paleturquoise;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .chat-bubble span {
+            height: max-content;
+            width: max-content;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        body {
+            padding-top: 66px;
+            /* 66px è l'altezza della navbar fixed che stiamo compensando */
+        }
+
+        header {
+            position: fixed;
+            background-color: cornflowerblue;
+            padding: 0.5rem 1rem;
+
+            top: 0;
+            /* left e right servono a rendere la navbar di nuovo grande quanto prima (quando era un blocco) */
+            left: 0;
+            right: 0;
+            /* diamo un valore di z-index abbastanza alto da assicurarci che la navbar sia sempre sopra a qualunque elemento incontri */
+            z-index: 900;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: max-content;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li>menu-item1</li>
+                <li>menu-item2</li>
+                <li>menu-item3</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Position Fixed</h1>
+
+    <div class="container">
+        <div class="box aqua"><span></span></div>
+        <div class="box coral"></div>
+        <div class="box crimson"><span></span></div>
+    </div>
+
+    <div class="chat-bubble">
+        <span>✉️</span>
+    </div>
+</body>
+
+</html>

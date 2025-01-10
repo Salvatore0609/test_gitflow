@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-sticky</title>
+
+    <link rel="stylesheet" href="./position.css">
+
+    <style>
+        body {
+            min-height: 400vh;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .box.aqua {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .box span {
+            height: 20px;
+            width: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0px;
+            margin: auto;
+        }
+
+        .box.coral {
+            position: relative;
+        }
+
+        .box.coral::before {
+            background-color: black;
+            content: "";
+            /* obbligatorio avere content, anche se vuoto */
+
+            width: 4px;
+            /* la width determina lo spessore della linea */
+
+            /* posizioniamo l'elemento in absolute, con coordinate tutte a 0 */
+            position: absolute;
+            /* left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0; */
+
+            /* inset è l'abbreviazione di tutte e 4 le coordinate */
+
+            inset: 0;
+            /* margin auto serve a centrare un elemento, in questo caso verrà centrato solo sull'asse x, perché nell'asse y sta già occupando l'intero spazio */
+            margin: auto;
+        }
+
+        .box.coral::after {
+            background-color: black;
+            content: "";
+            height: 4px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        /* INIZIO GESTIONE FIXED */
+
+        .chat-bubble {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: paleturquoise;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .chat-bubble span {
+            height: max-content;
+            width: max-content;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        body {
+            padding-top: 66px;
+            /* 66px è l'altezza della navbar fixed che stiamo compensando */
+        }
+
+        header {
+            position: fixed;
+            background-color: cornflowerblue;
+            padding: 0.5rem 1rem;
+
+            top: 0;
+            /* left e right servono a rendere la navbar di nuovo grande quanto prima (quando era un blocco) */
+            left: 0;
+            right: 0;
+            /* diamo un valore di z-index abbastanza alto da assicurarci che la navbar sia sempre sopra a qualunque elemento incontri */
+            z-index: 900;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: max-content;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        /* INIZIO GESTIONE STICKY */
+
+        .alert {
+            max-width: 800px;
+            margin-inline: auto;
+            background-color: crimson;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            position: sticky;
+            top: 66px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li>menu-item1</li>
+                <li>menu-item2</li>
+                <li>menu-item3</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Position Fixed</h1>
+
+    <div class="container">
+        <div class="box aqua"><span></span></div>
+        <div class="box coral"></div>
+        <div class="box crimson"><span></span></div>
+    </div>
+
+    <div class="alert">
+        se mi scrolli mi appiccico
+    </div>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam consequatur repudiandae natus consectetur vel
+        eveniet. Aperiam, dolorum accusamus omnis natus maiores inventore adipisci suscipit nisi delectus consectetur
+        blanditiis necessitatibus dignissimos.
+        Nobis exercitationem ab eum! Repellat eaque repudiandae corporis omnis natus, quia dignissimos, earum molestias
+        dicta sapiente itaque culpa sit consequatur? Sapiente dignissimos autem vel quibusdam laudantium. Voluptatibus
+        eaque maxime voluptatum?
+        Fugiat assumenda, quibusdam sed ipsam eos quisquam. Quibusdam earum perferendis quam minus possimus cupiditate,
+        sunt fuga consequatur? Ullam a non quo dignissimos iusto consequuntur, mollitia quidem accusantium veniam quas
+        commodi!
+        Sapiente in ipsa aliquid animi architecto, perferendis, iure adipisci, tempore explicabo totam consequuntur
+        consectetur sint repellat cum. Expedita nulla officia iste, iusto at eum nobis molestias, quos ipsa, error
+        laboriosam!
+        Exercitationem provident qui sit et dolores ea nobis accusamus hic, mollitia, pariatur id eaque rem voluptas a
+        est sapiente sequi in officiis distinctio explicabo sunt! Magni recusandae consequatur illo ipsam?
+        Rem pariatur eligendi porro facere veniam dolores culpa, ex sequi in non ipsam fuga ipsum quam quod eaque
+        deleniti soluta omnis. Deleniti asperiores iure repellat quisquam consequuntur eos ratione debitis.
+        Voluptate fuga sed numquam autem quo consectetur, fugit culpa quis nihil sint facilis reiciendis libero? Magni
+        voluptates possimus architecto illo necessitatibus iste dignissimos eius, ducimus optio accusantium vel
+        exercitationem ratione.
+        Labore provident perferendis soluta repellat cum possimus sit architecto placeat iusto quis suscipit voluptatem
+        exercitationem voluptas ipsam commodi quam, in magnam tempora. Eius dolorem nobis magnam doloribus ipsam, id
+        libero?
+        Odio magni repudiandae ratione quas dignissimos at saepe officiis earum recusandae facere, laudantium
+        exercitationem, consequuntur qui illum libero corrupti aliquid. Ab ad veniam officiis expedita asperiores in
+        sequi, ducimus autem?
+        Possimus, incidunt ut ab fugiat delectus molestiae modi dignissimos asperiores voluptate eos sequi laboriosam
+        atque facere similique a quod, aperiam nulla necessitatibus nostrum dicta tenetur! Quos ex nemo consequuntur
+        perspiciatis!</p>
+    <div class="alert">
+        capitolo 2
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam consequatur repudiandae natus consectetur vel
+        eveniet. Aperiam, dolorum accusamus omnis natus maiores inventore adipisci suscipit nisi delectus consectetur
+        blanditiis necessitatibus dignissimos.
+        Nobis exercitationem ab eum! Repellat eaque repudiandae corporis omnis natus, quia dignissimos, earum molestias
+        dicta sapiente itaque culpa sit consequatur? Sapiente dignissimos autem vel quibusdam laudantium. Voluptatibus
+        eaque maxime voluptatum?
+        Fugiat assumenda, quibusdam sed ipsam eos quisquam. Quibusdam earum perferendis quam minus possimus cupiditate,
+        sunt fuga consequatur? Ullam a non quo dignissimos iusto consequuntur, mollitia quidem accusantium veniam quas
+        commodi!
+        Sapiente in ipsa aliquid animi architecto, perferendis, iure adipisci, tempore explicabo totam consequuntur
+        consectetur sint repellat cum. Expedita nulla officia iste, iusto at eum nobis molestias, quos ipsa, error
+        laboriosam!
+        Exercitationem provident qui sit et dolores ea nobis accusamus hic, mollitia, pariatur id eaque rem voluptas a
+        est sapiente sequi in officiis distinctio explicabo sunt! Magni recusandae consequatur illo ipsam?
+        Rem pariatur eligendi porro facere veniam dolores culpa, ex sequi in non ipsam fuga ipsum quam quod eaque
+        deleniti soluta omnis. Deleniti asperiores iure repellat quisquam consequuntur eos ratione debitis.
+        Voluptate fuga sed numquam autem quo consectetur, fugit culpa quis nihil sint facilis reiciendis libero? Magni
+        voluptates possimus architecto illo necessitatibus iste dignissimos eius, ducimus optio accusantium vel
+        exercitationem ratione.
+        Labore provident perferendis soluta repellat cum possimus sit architecto placeat iusto quis suscipit voluptatem
+        exercitationem voluptas ipsam commodi quam, in magnam tempora. Eius dolorem nobis magnam doloribus ipsam, id
+        libero?
+        Odio magni repudiandae ratione quas dignissimos at saepe officiis earum recusandae facere, laudantium
+        exercitationem, consequuntur qui illum libero corrupti aliquid. Ab ad veniam officiis expedita asperiores in
+        sequi, ducimus autem?
+        Possimus, incidunt ut ab fugiat delectus molestiae modi dignissimos asperiores voluptate eos sequi laboriosam
+        atque facere similique a quod, aperiam nulla necessitatibus nostrum dicta tenetur! Quos ex nemo consequuntur
+        perspiciatis!</p>
+    <div class="alert">
+        capitolo 3
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam consequatur repudiandae natus consectetur vel
+        eveniet. Aperiam, dolorum accusamus omnis natus maiores inventore adipisci suscipit nisi delectus consectetur
+        blanditiis necessitatibus dignissimos.
+        Nobis exercitationem ab eum! Repellat eaque repudiandae corporis omnis natus, quia dignissimos, earum molestias
+        dicta sapiente itaque culpa sit consequatur? Sapiente dignissimos autem vel quibusdam laudantium. Voluptatibus
+        eaque maxime voluptatum?
+        Fugiat assumenda, quibusdam sed ipsam eos quisquam. Quibusdam earum perferendis quam minus possimus cupiditate,
+        sunt fuga consequatur? Ullam a non quo dignissimos iusto consequuntur, mollitia quidem accusantium veniam quas
+        commodi!
+        Sapiente in ipsa aliquid animi architecto, perferendis, iure adipisci, tempore explicabo totam consequuntur
+        consectetur sint repellat cum. Expedita nulla officia iste, iusto at eum nobis molestias, quos ipsa, error
+        laboriosam!
+        Exercitationem provident qui sit et dolores ea nobis accusamus hic, mollitia, pariatur id eaque rem voluptas a
+        est sapiente sequi in officiis distinctio explicabo sunt! Magni recusandae consequatur illo ipsam?
+        Rem pariatur eligendi porro facere veniam dolores culpa, ex sequi in non ipsam fuga ipsum quam quod eaque
+        deleniti soluta omnis. Deleniti asperiores iure repellat quisquam consequuntur eos ratione debitis.
+        Voluptate fuga sed numquam autem quo consectetur, fugit culpa quis nihil sint facilis reiciendis libero? Magni
+        voluptates possimus architecto illo necessitatibus iste dignissimos eius, ducimus optio accusantium vel
+        exercitationem ratione.
+        Labore provident perferendis soluta repellat cum possimus sit architecto placeat iusto quis suscipit voluptatem
+        exercitationem voluptas ipsam commodi quam, in magnam tempora. Eius dolorem nobis magnam doloribus ipsam, id
+        libero?
+        Odio magni repudiandae ratione quas dignissimos at saepe officiis earum recusandae facere, laudantium
+        exercitationem, consequuntur qui illum libero corrupti aliquid. Ab ad veniam officiis expedita asperiores in
+        sequi, ducimus autem?
+        Possimus, incidunt ut ab fugiat delectus molestiae modi dignissimos asperiores voluptate eos sequi laboriosam
+        atque facere similique a quod, aperiam nulla necessitatibus nostrum dicta tenetur! Quos ex nemo consequuntur
+        perspiciatis!</p>
+    <div class="alert">
+        capitolo 4
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam consequatur repudiandae natus consectetur vel
+        eveniet. Aperiam, dolorum accusamus omnis natus maiores inventore adipisci suscipit nisi delectus consectetur
+        blanditiis necessitatibus dignissimos.
+        Nobis exercitationem ab eum! Repellat eaque repudiandae corporis omnis natus, quia dignissimos, earum molestias
+        dicta sapiente itaque culpa sit consequatur? Sapiente dignissimos autem vel quibusdam laudantium. Voluptatibus
+        eaque maxime voluptatum?
+        Fugiat assumenda, quibusdam sed ipsam eos quisquam. Quibusdam earum perferendis quam minus possimus cupiditate,
+        sunt fuga consequatur? Ullam a non quo dignissimos iusto consequuntur, mollitia quidem accusantium veniam quas
+        commodi!
+        Sapiente in ipsa aliquid animi architecto, perferendis, iure adipisci, tempore explicabo totam consequuntur
+        consectetur sint repellat cum. Expedita nulla officia iste, iusto at eum nobis molestias, quos ipsa, error
+        laboriosam!
+        Exercitationem provident qui sit et dolores ea nobis accusamus hic, mollitia, pariatur id eaque rem voluptas a
+        est sapiente sequi in officiis distinctio explicabo sunt! Magni recusandae consequatur illo ipsam?
+        Rem pariatur eligendi porro facere veniam dolores culpa, ex sequi in non ipsam fuga ipsum quam quod eaque
+        deleniti soluta omnis. Deleniti asperiores iure repellat quisquam consequuntur eos ratione debitis.
+        Voluptate fuga sed numquam autem quo consectetur, fugit culpa quis nihil sint facilis reiciendis libero? Magni
+        voluptates possimus architecto illo necessitatibus iste dignissimos eius, ducimus optio accusantium vel
+        exercitationem ratione.
+        Labore provident perferendis soluta repellat cum possimus sit architecto placeat iusto quis suscipit voluptatem
+        exercitationem voluptas ipsam commodi quam, in magnam tempora. Eius dolorem nobis magnam doloribus ipsam, id
+        libero?
+        Odio magni repudiandae ratione quas dignissimos at saepe officiis earum recusandae facere, laudantium
+        exercitationem, consequuntur qui illum libero corrupti aliquid. Ab ad veniam officiis expedita asperiores in
+        sequi, ducimus autem?
+        Possimus, incidunt ut ab fugiat delectus molestiae modi dignissimos asperiores voluptate eos sequi laboriosam
+        atque facere similique a quod, aperiam nulla necessitatibus nostrum dicta tenetur! Quos ex nemo consequuntur
+        perspiciatis!</p>
+    <div class="alert">
+        capitolo 5
+    </div>
+    <div class="chat-bubble">
+        <span>✉️</span>
+    </div>
+</body>
+
+</html>

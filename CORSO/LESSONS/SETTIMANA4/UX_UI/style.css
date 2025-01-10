@@ -1,0 +1,97 @@
+/* qui sopra scriviamo le regole base, tipicamente applicate dalla misura "mobile" */
+
+.container {
+    padding-inline: 1rem;
+    background-color: coral;
+  }
+  
+  /*  breakpoint standard: 
+  
+  0 ~ 575px - mobile (default) ☝️ 
+  576px - small
+  768px - medium
+  992px - large
+  1200px - x-large
+  1400px - xx-large
+  
+  */
+  
+  /* applica le regole da 0px fino a 575px*/
+  @media screen and (max-width: 575px) {
+    .container h1,
+    .container p {
+      text-align: center;
+      /* si applica solo su schermi mobile */
+    }
+  
+    .container img {
+      max-width: 100%;
+    }
+  }
+  
+  /* strutturiamo le nostre media queries dalla più piccola alla più grande con min-width */
+  
+  /* inserisci all'occorrenza breakpoint 576px - small screen */
+  
+  /* applica le regole da 768px in poi (infinito) - medium screen */
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 700px;
+      margin-inline: auto;
+      padding-inline: 2rem;
+      background-color: aquamarine;
+    }
+  
+    h1 {
+      font-size: 50px;
+      letter-spacing: -2px;
+      line-height: 0.8;
+    }
+  }
+  
+  /* inserisci all'occorrenza breakpoint 992px - large screen */
+  
+  /* applica le regole da 1200px in poi (infinito) - x-large screen */
+  @media screen and (min-width: 1200px) {
+    /* sovrascriviamo le regole di max-width e background-color da 1200px in su */
+    .container {
+      max-width: 1000px;
+      background-color: unset;
+    }
+  }
+  /* inserisci all'occorrenza breakpoint 1400px - xx-large screen */
+  
+  /* creazione di un range */
+  
+  /* 
+  le regole si applicheranno solamente tra
+  | 800px ------ 1000px |
+  */
+  
+  /* consigliato solo in condizioni particolari perché troncherebbe il comportamento prima o dopo questo range */
+  @media screen and (min-width: 800px) and (max-width: 1000px) {
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      box-shadow: 0 6px 10px rgb(0 0 0 / 15%);
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* regole che si applicano in caso di stampa  */
+  @media print {
+    img,
+    button {
+      display: none;
+    }
+  
+    .container {
+      background-color: none;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  }

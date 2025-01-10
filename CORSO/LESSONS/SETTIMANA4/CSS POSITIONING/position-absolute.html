@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-absolute</title>
+
+    <link rel="stylesheet" href="./position.css">
+
+    <style>
+        /* per poter dare un particolare riferimento ad un figlio posizionato in absolute, avremo bisogno di un contenitore posizionato (position !== static )
+position: relative; è il valore più innocuo che possiamo dare ad un contenitore per renderlo il nuovo riferimento di un suo figlio absolute */
+
+        .container {
+            position: relative;
+        }
+
+        .box.aqua {
+            /* un elemento posizionato in assoluto viene rimosso dal normale flusso degli elementi nella pagina o nel suo contesto
+            di conseguenza gli altri gli occuperanno il posto, o verrano posizionati dietro di esso */
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .box span {
+            height: 20px;
+            width: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0px;
+            margin: auto;
+        }
+
+        .box.coral {
+            position: relative;
+        }
+
+        .box.coral::before {
+            background-color: black;
+            content: "";
+            /* obbligatorio avere content, anche se vuoto */
+
+            width: 4px;
+            /* la width determina lo spessore della linea */
+
+            /* posizioniamo l'elemento in absolute, con coordinate tutte a 0 */
+            position: absolute;
+            /* left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0; */
+
+            /* inset è l'abbreviazione di tutte e 4 le coordinate */
+
+            inset: 0;
+            /* margin auto serve a centrare un elemento, in questo caso verrà centrato solo sull'asse x, perché nell'asse y sta già occupando l'intero spazio */
+            margin: auto;
+        }
+
+        .box.coral::after {
+            background-color: black;
+            content: "";
+            height: 4px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Position Absolute</h1>
+
+    <div class="container">
+        <div class="box aqua"><span></span></div>
+        <div class="box coral"></div>
+        <div class="box crimson"><span></span></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./flexbox.css">
+    <title>Flexbox</title>
+</head>
+
+<body>
+
+    <h2>Flexbox: normale - direzione row</h2>
+    <div class="container">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: direzione row-reverse</h2>
+    <div class="container n2">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: direzione column</h2>
+    <div class="container n3">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: direzione column-reverse</h2>
+    <div class="container n4">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: con wrap</h2>
+    <div class="container n5">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <!-- JUSTIFY-CONTENT === MAIN AXIS -->
+    <h2>Flexbox: justify-content - direction: row</h2>
+    <div class="container n6">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: justify-content - direction: column</h2>
+    <div class="container n7">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <!-- ALIGN-ITEMS === CROSS AXIS -->
+    <h2>Flexbox: align-items - direction: row</h2>
+    <div class="container n8">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: align-items - direction: column</h2>
+    <div class="container n9">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+    <h2>Flexbox: align-items - stretch</h2>
+    <div class="container n10">
+        <img src="https://images.unsplash.com/photo-1736319551652-4378fc7f9502?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="">
+        <div class=" coral">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime sequi omnis sapiente beatae deleniti
+                dolor animi quibusdam nisi, asperiores, rem minus pariatur incidunt exercitationem fugiat totam
+                obcaecati? Consequatur, vitae ab.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, est nemo officiis sunt eos
+                doloremque dignissimos accusamus reprehenderit impedit sit beatae voluptatem. Et minus dolor nobis,
+                harum ab tenetur nulla.
+                Praesentium a odit ut explicabo, minima ratione ipsum qui aspernatur atque, magni voluptatem,
+                repudiandae ex totam sequi minus iure nulla consequuntur eius nam expedita quidem placeat maiores est
+                quo. Consequuntur?
+                Itaque, reiciendis debitis! Qui beatae labore dolore voluptas laborum laudantium nihil fuga aliquid odio
+                exercitationem, placeat deleniti ipsa officia blanditiis tenetur obcaecati! Sequi non similique
+                asperiores expedita perspiciatis libero at?</p>
+        </div>
+
+    </div>
+
+    <h2>Flexbox: align-items - baseline</h2>
+    <div class="container n11">
+        <div class="box aqua">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1000px-Logo_NIKE.svg.png"
+                alt="">
+            Lorem ipsum dolor sit amet.
+        </div>
+        <div class="box coral">
+            <img src="https://www.scarpabaleno.it/wp-content/uploads/logo-puma-oggi.png" alt="">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, aut.
+        </div>
+        <div class="box crimson">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Timberland-logo.png" alt="">
+            Lorem ipsum dolor sit amet consectetur.
+        </div>
+        <div class="box antique">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/2560px-Under_armour_logo.svg.png"
+                alt="">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia esse facere ipsum ullam autem amet.
+        </div>
+    </div>
+
+    <h2>Flexbox: order</h2>
+    <div class="container n12">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson" style="order: 1">order 1, ultimo elemento</div>
+        <div class="box antique" style="order: -1">order -1, primo elemento</div>
+        <div class="box coral">5</div>
+        <div class="box aqua">6</div>
+    </div>
+
+    <h2>Flexbox: flex-grow</h2>
+    <div class="container n13">
+        <div class="box aqua">1</div>
+        <div class="box coral">2</div>
+        <div class="box crimson">3</div>
+        <div class="box antique">4</div>
+    </div>
+
+</body>
+
+</html>

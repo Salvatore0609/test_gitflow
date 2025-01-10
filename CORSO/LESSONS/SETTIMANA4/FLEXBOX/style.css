@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+/* questa modalità viene applicata su un div "fantasma" posizionato sotto all'elemento flottante, in modo da schermarlo */
+/* .clearfix {
+  clear: both;
+} */
+
+/* questa modalità si applica direttamente al contenitore nel quale potrebbe generarsi il problema */
+/* .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+} */
+
+/* questa modalità si applica sempre al contenitore ed è una versione più recente della soluzione */
+.clearfix {
+  display: flow-root;
+}
+
+header {
+  background-color: aquamarine;
+}
+header nav {
+  display: inline-block;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+}
+
+.logo,
+header nav {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 60%;
+  margin-inline: auto;
+}
+
+main {
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+
+main img {
+  width: 100px;
+  float: left;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+.truncate-7 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+}
+
+.col {
+  float: left;
+  width: 33.333%;
+}
+
+.aqua {
+  background-color: aqua;
+}
+.coral {
+  background-color: coral;
+}
+.crimson {
+  background-color: crimson;
+}

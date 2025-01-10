@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  /* padding: 1rem; */
+  min-height: 200px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 3rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+.coral {
+  background-color: coral;
+}
+
+.crimson {
+  background-color: crimson;
+}
+
+.antique {
+  background-color: antiquewhite;
+}
