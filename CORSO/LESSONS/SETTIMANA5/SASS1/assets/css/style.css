@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(26, 0, 39);
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* main section {
+    padding-block: $size-5;
+    color: $color-white;
+    background: {
+        color: $secondary-color;
+    }
+}
+
+main section ul {
+    padding: $size-0;
+}
+
+main section ul li {
+    display: inline-block;
+} */
+header {
+  background-color: rgb(218, 142, 0);
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+header span {
+  margin-right: auto;
+}
+header nav ul {
+  margin: 0;
+}
+header nav ul li {
+  display: inline-block;
+}
+
+main {
+  padding: 1rem;
+}
+main section {
+  padding-inline: 1rem;
+  padding-block: 3rem;
+  color: rgb(232, 218, 240);
+  background-color: rgb(128, 0, 197);
+}
+main section:nth-of-type(2) {
+  background-color: rgb(59, 0, 89);
+  color: rgb(232, 218, 240);
+}
+main section:hover {
+  background-color: rgb(197, 0, 141);
+}
+@media screen and (min-width: 768px) {
+  main section {
+    padding-block: 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  main section {
+    padding-block: 5rem;
+  }
+}
+main section ul {
+  padding: 0;
+}
+main section ul li {
+  display: inline-block;
+}
+main section ul li:hover {
+  font-size: 1.6rem;
+  background-color: rgb(59, 0, 89);
+}
+
+footer section ul li::marker {
+  content: icon;
+}/*# sourceMappingURL=style.css.map */
