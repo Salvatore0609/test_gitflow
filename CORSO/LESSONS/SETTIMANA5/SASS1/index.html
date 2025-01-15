@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
     <header>
-      <nav>
-        <ul>
-          <li>elemento</li>
-          <li>elemento</li>
-          <li>elemento</li>
-        </ul>
-      </nav>
+        <span>Logo</span>
+        <nav>
+            <ul>
+                <li>elemento</li>
+                <li>elemento</li>
+                <li>elemento</li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-      <h1>Benvenuto SASS!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi cum eum, placeat ratione commodi doloremque nesciunt nemo pariatur incidunt
-        quos libero aliquam voluptas illo nisi optio at soluta? Asperiores, vel!
-      </p>
+    <main class="main-context">
+        <h1>Benvenuto SASS!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste facilis quidem cumque inventore
+            tenetur
+            tempore deleniti! Eius odio ducimus explicabo voluptate iure amet et cumque enim itaque, sunt quisquam?</p>
 
-      <ul>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
-      </ul>
+        <section class="main-context--section">
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </section>
+        <section class="main-context--section">
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </section>
+
+        <button class="main-context--section--button">
+            Normal button
+        </button>
+        <button class="main-context--section--button main-context--section--button--state-success">
+            Success button
+        </button>
+        <button class="main-context--section--button main-context--section--button--state-danger">
+            Danger button
+        </button>
+
+        <section>
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+        </section>
     </main>
-
     <footer>
-      <section>
-        <button>Schiacciami</button>
-      </section>
+        <section>
+            <ul>
+                <li>footer-element</li>
+                <li>footer-element</li>
+                <li>footer-element</li>
+                <li>footer-element</li>
+            </ul>
+
+            <button class="btn">Contattaci</button>
+            <button class="btn-alt">Dove siamo</button>
+            <button class="btn-basic">Mappa</button>
+        </section>
     </footer>
-    
-  </body>
+</body>
+
 </html>
