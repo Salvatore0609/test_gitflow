@@ -5,10 +5,7 @@
 }
 
 body {
-  margin: $size-0;
-  font-family: $font-sans-serif;
-  color: $color-body;
-  line-height: 1.4;
+  margin: 0;
 }
 
 h1,
@@ -22,16 +19,20 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6 {
-  // proprietà composte
-  font: {
-    family: $font-serif;
-    weight: 800;
-  }
-
-  margin-top: $size-0;
+.h6,
+p {
+  margin-top: 0;
 }
 
-p {
-  margin-top: $size-0;
+
+button,
+input,
+textarea,
+select {
+  font: {
+    family: inherit;
+    weight: inherit;
+    style: inherit;
+  }
+  color: inherit
 }

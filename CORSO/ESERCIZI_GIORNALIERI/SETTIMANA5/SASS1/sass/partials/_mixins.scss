@@ -1,4 +1,15 @@
-@mixin floating($border-radius, $box-shadows, $border) {
-    
+@mixin floating($radius: 0px, $shadows: 0 0 0 rgb(0 0 0), $border: none) {
+    border-radius: $radius;
+    box-shadow: $shadows;
+    border: $border
+
+};
+
+@mixin grid($columns) {
+    display: flex;
+  flex-wrap: wrap;
+  & > div{
+    width: calc(100% / $columns)
+  }
 }
 
