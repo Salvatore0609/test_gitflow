@@ -1,0 +1,41 @@
+// 6) MIXINS (@mixin) - un blocco di codice CSS DINAMICO, può generarsi anche con valori derivanti da parametri
+
+// possiamo impostare un default applicandogli un valore iniziale: $parametro: valoreDefault
+@mixin myBox($borderWidth, $boxColor: paleturquoise, $radius: 12px) {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-block: 2rem;
+  border: $borderWidth solid scale-color($boxColor, $lightness: -45%);
+  border-radius: $radius;
+  background-color: $boxColor;
+  box-shadow: 0 3px 30px scale-color($boxColor, $lightness: -80%);
+}
+
+// una volta definito, il mixin con le sue regole andrà utilizzato andandolo ad includere dentro un selettore (@include)
+
+@mixin dynamicSquare($size, $propertyName, $propertyValue) {
+  width: $size;
+  height: $size;
+
+  margin-block: 2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  border: 2px solid black;
+
+  // INTERPOLAZIONE DI VALORE #{} - la proprietà viene composta con il valore dinamico contenuta nel parametro
+  // (che può essere qualsiasi valore valido per la proprietà backround-*)
+
+  background-#{$propertyName}: $propertyValue;
+
+  // CONDIZIONALI @if{} @else {}
+  // questo sistema può essere utile per dinamicizzare ulteriormente il risultato del mixin
+  // applicando in alcuni casi delle proprietà che non si applicano in altri casi e viceversa
+
+  @if ($propertyName == "image") {
+    background-size: cover;
+  } @else {
+    border-radius: 20px;
+  }
+}
