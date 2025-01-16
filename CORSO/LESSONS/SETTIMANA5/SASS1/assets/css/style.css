@@ -1,0 +1,413 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(26, 0, 39);
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.btn-basic {
+  border: none;
+  background-color: transparent;
+}
+
+input,
+textarea,
+select, .btn-basic {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+header {
+  background-color: rgb(218, 142, 0);
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+header span {
+  margin-right: auto;
+}
+header nav ul {
+  margin: 0;
+}
+header nav ul li {
+  display: inline-block;
+}
+
+.main-context {
+  padding: 1rem;
+}
+.main-context--section {
+  padding-inline: 1rem;
+  padding-block: 3rem;
+  color: rgb(232, 218, 240);
+  background-color: rgb(128, 0, 197);
+}
+.main-context--section:nth-of-type(2) {
+  background-color: rgb(59, 0, 89);
+  color: rgb(232, 218, 240);
+}
+.main-context--section:hover {
+  background-color: rgb(197, 0, 141);
+}
+@media screen and (min-width: 768px) {
+  .main-context--section {
+    padding-block: 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-context--section {
+    padding-block: 5rem;
+  }
+}
+.main-context--section ul {
+  padding: 0;
+}
+.main-context--section ul li {
+  display: inline-block;
+}
+.main-context--section ul li:hover {
+  font-size: 1.6rem;
+  background-color: rgb(59, 0, 89);
+}
+.main-context--section--button {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 7px 12px;
+  border: 1px solid #d5d5d5;
+  background-image: linear-gradient(#eee, #ddd);
+  font: 700 13px/18px Helvetica, arial;
+}
+.main-context--section--button--state-success {
+  color: #fff;
+  background: #569e3d linear-gradient(#79d858, #569e3d) repeat-x;
+  border-color: #4a993e;
+}
+.main-context--section--button--state-danger {
+  color: #900;
+}
+
+footer section ul li::marker {
+  content: "📌";
+}
+
+.btn, .btn-alt {
+  background-color: rgb(26, 0, 39);
+  color: rgb(232, 218, 240);
+  padding: 0.25rem 1rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid rgb(128, 0, 197);
+  border-radius: 6px;
+}
+
+.btn-alt {
+  background-color: rgb(218, 142, 0);
+  border-color: rgb(197, 0, 141);
+}
+
+.btn-basic {
+  font-weight: 600;
+  border: 2px solid rgb(218, 142, 0);
+}
+
+.box-1 {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-block: 2rem;
+  border: 2px solid #6c004e;
+  border-radius: 10px;
+  background-color: rgb(197, 0, 141);
+  box-shadow: 0 3px 30px #27001c;
+}
+
+.box-2 {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-block: 2rem;
+  border: 4px solid #912548;
+  border-radius: 4px;
+  background-color: palevioletred;
+  box-shadow: 0 3px 30px #350d1a;
+}
+
+.box-3 {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-block: 2rem;
+  border: 4px solid #08d508;
+  border-radius: 12px;
+  background-color: palegreen;
+  box-shadow: 0 3px 30px #034e03;
+}
+
+.box-4 {
+  width: 200px;
+  height: 200px;
+  margin-block: 2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  border: 2px solid black;
+  background-color: coral;
+  border-radius: 20px;
+}
+
+.box-5 {
+  width: 200px;
+  height: 200px;
+  margin-block: 2rem;
+  display: inline-block;
+  vertical-align: bottom;
+  border: 2px solid black;
+  background-image: url(https://images.unsplash.com/photo-1735299362091-33c94b71a758?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.custom-padding-1 {
+  padding: 10px;
+}
+
+.custom-padding-2 {
+  padding: 20px;
+}
+
+.custom-padding-3 {
+  padding: 30px;
+}
+
+.custom-padding-4 {
+  padding: 40px;
+}
+
+.custom-padding-5 {
+  padding: 50px;
+}
+
+.custom-padding-6 {
+  padding: 60px;
+}
+
+.custom-padding-7 {
+  padding: 70px;
+}
+
+.custom-padding-8 {
+  padding: 80px;
+}
+
+.custom-padding-9 {
+  padding: 90px;
+}
+
+.custom-padding-10 {
+  padding: 100px;
+}
+
+.custom-padding-11 {
+  padding: 110px;
+}
+
+.custom-padding-12 {
+  padding: 120px;
+}
+
+.custom-padding-13 {
+  padding: 130px;
+}
+
+.custom-padding-14 {
+  padding: 140px;
+}
+
+.custom-padding-15 {
+  padding: 150px;
+}
+
+.custom-padding-16 {
+  padding: 160px;
+}
+
+.custom-padding-17 {
+  padding: 170px;
+}
+
+.custom-padding-18 {
+  padding: 180px;
+}
+
+.custom-padding-19 {
+  padding: 190px;
+}
+
+.custom-padding-20 {
+  padding: 200px;
+}
+
+.square-red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.square-green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.square-blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.square-yellow {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+.square-purple {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+}
+
+.square-orange {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+.square-palegoldenrod {
+  width: 100px;
+  height: 100px;
+  background-color: palegoldenrod;
+}
+
+.square-red {
+  width: 100px;
+  height: 100px;
+  background-color: #ff0000;
+}
+
+.square-green {
+  width: 100px;
+  height: 100px;
+  background-color: #008000;
+}
+
+.square-blue {
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+}
+
+.square-yellow {
+  width: 100px;
+  height: 100px;
+  background-color: #ffff00;
+}
+
+.square-purple {
+  width: 100px;
+  height: 100px;
+  background-color: #800080;
+}
+
+.padding-xs {
+  padding: 10px;
+}
+.padding-xs-inline {
+  padding-inline: 10px;
+}
+.padding-xs-block {
+  padding-block: 10px;
+}
+
+.padding-sm {
+  padding: 20px;
+}
+.padding-sm-inline {
+  padding-inline: 20px;
+}
+.padding-sm-block {
+  padding-block: 20px;
+}
+
+.padding-md {
+  padding: 30px;
+}
+.padding-md-inline {
+  padding-inline: 30px;
+}
+.padding-md-block {
+  padding-block: 30px;
+}
+
+.padding-lg {
+  padding: 60px;
+}
+.padding-lg-inline {
+  padding-inline: 60px;
+}
+.padding-lg-block {
+  padding-block: 60px;
+}
+
+.padding-xl {
+  padding: 120px;
+}
+.padding-xl-inline {
+  padding-inline: 120px;
+}
+.padding-xl-block {
+  padding-block: 120px;
+}
+
+.padding-xxl {
+  padding: 240px;
+}
+.padding-xxl-inline {
+  padding-inline: 240px;
+}
+.padding-xxl-block {
+  padding-block: 240px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,48 +1,85 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>SASS - Esempio</title>
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <header class="showcase padding-inline-xxl padding-block-lg">
+
+    <header>
+        <span>Logo</span>
         <nav>
-            <h1 class="logo">SASS</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Servizi</a></li>
+                <li>elemento</li>
+                <li>elemento</li>
+                <li>elemento</li>
             </ul>
         </nav>
-
-        <div class="showcase-content">
-            <div>
-                <h1>Sviluppo e <br /> Web Design</h1>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eligendi tempore atque laborum.
-                    Quisquam nemo at non. Corrupti, vitae dolore.
-                </p>
-                <button class="btn btn-primary">Approfondisci</button>
-                <button class="btn btn-secondary">Accedi</button>
-                <button class="btn btn-tertiary">Contattaci</button>
-            </div>
-            <img src="https://picsum.photos/id/0/2000/2000" class="translate-20" height="600" width="600" />
-        </div>
     </header>
-    <main class="padding-block-xxl">
-        <div class="line-4">
-            <div><img src="https://picsum.photos/id/0/450/450" /></div>
-            <div><img src="https://picsum.photos/id/0/450/450" /></div>
-            <div><img src="https://picsum.photos/id/0/450/450" /></div>
-            <div><img src="https://picsum.photos/id/0/450/450" /></div>
 
-        </div>
+    <main class="main-context">
+        <h1>Benvenuto SASS!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste facilis quidem cumque inventore
+            tenetur
+            tempore deleniti! Eius odio ducimus explicabo voluptate iure amet et cumque enim itaque, sunt quisquam?</p>
+
+        <section class="main-context--section">
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </section>
+        <section class="main-context--section">
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </section>
+
+        <button class="main-context--section--button">
+            Normal button
+        </button>
+        <button class="main-context--section--button main-context--section--button--state-success">
+            Success button
+        </button>
+        <button class="main-context--section--button main-context--section--button--state-danger">
+            Danger button
+        </button>
+
+        <section>
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+        </section>
     </main>
+    <footer>
+        <section>
+            <ul>
+                <li>footer-element</li>
+                <li>footer-element</li>
+                <li>footer-element</li>
+                <li>footer-element</li>
+            </ul>
+
+            <button class="btn">Contattaci</button>
+            <button class="btn-alt">Dove siamo</button>
+            <button class="btn-basic">Mappa</button>
+        </section>
+    </footer>
 </body>
 
 </html>

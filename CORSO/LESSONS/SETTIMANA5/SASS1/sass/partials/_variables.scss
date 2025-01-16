@@ -1,0 +1,23 @@
+// 1) variabili SCSS
+// ci permettono di creare valori che utilizzeremo più volte in punti differenti del nostro codice
+// il vantaggio è poter cambiare l'origine del valore in un unico punto e vedere l'effetto propagarsi a tutti gli elementi che lo utilizzavano
+
+$size-0: 0;
+$size-1: 0.25rem;
+$size-2: 0.5rem;
+$size-3: 1rem;
+$size-4: 1.5rem;
+$size-5: 3rem;
+
+$font-sans-serif: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+$font-serif: Georgia, "Times New Roman", Times, serif;
+
+$main-color: rgb(197, 0, 141);
+$secondary-color: rgb(128, 0, 197);
+$accent-color: rgb(218, 142, 0);
+$color-gray: rgb(100, 86, 108);
+$color-white: rgb(232, 218, 240);
+$color-body: rgb(26, 0, 39);
+$color-bg-body: rgb(59, 0, 89);
+// tutte le variabili e funzionalità specifiche di SCSS NON si propagheranno al CSS finale
+$colorKeys: red, green, blue, yellow, purple, orange, palegoldenrod;
