@@ -1,0 +1,37 @@
+@import "./partials/functions";
+.long-shadow {
+  h2 {
+    text-align: center;
+    color: palevioletred;
+    font: {
+      family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      weight: 800;
+      size: 60px;
+    }
+    text-shadow: createLongShadow(purple, 100);
+  }
+}
+
+$border-colors: red, green, blue, yellow, purple, coral, crimson, palevioletred, palegreen, palegoldenrod;
+
+.multiple-borders {
+  margin-block: 10rem;
+  & > div {
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    background-color: rgb(33, 33, 33);
+    box-shadow: createMultipleBorders($border-colors);
+  }
+}
+
+.multiple-borders-steps {
+  margin-block: 10rem;
+  & > div {
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    background-color: rgb(33, 33, 33);
+    box-shadow: createMultipleBordersSteps(red, 5);
+  }
+}

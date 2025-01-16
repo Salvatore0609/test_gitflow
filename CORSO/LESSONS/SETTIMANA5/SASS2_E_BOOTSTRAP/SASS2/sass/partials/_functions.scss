@@ -1,0 +1,29 @@
+@function createLongShadow($color, $steps) {
+  $shadow: null;
+
+  @for $i from 1 through $steps {
+    $shadow: $shadow, #{$i}px #{$i}px $color;
+  }
+
+  @return $shadow;
+}
+
+@function createMultipleBorders($colors) {
+  $borders: null;
+
+  @for $i from 1 through length($colors) {
+    $borders: $borders, 0 0 0 #{$i * 5}px nth($colors, $i);
+  }
+
+  @return $borders;
+}
+
+@function createMultipleBordersSteps($color, $steps) {
+  $borders: null;
+
+  @for $i from 1 through $steps {
+    $borders: $borders, 0 0 0 #{$i * 5}px scale-color(adjust-hue($color, $i * 20%), $whiteness: $i * 20%);
+  }
+
+  @return $borders;
+}
