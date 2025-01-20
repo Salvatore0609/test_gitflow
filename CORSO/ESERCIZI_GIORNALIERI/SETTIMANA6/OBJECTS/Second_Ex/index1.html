@@ -6,8 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Primo Esercizio</h1>
+    <h1>Secondo Esercizio</h1>
 
-    <script src="./script.js"></script>
+    <form id="petForm">
+      <label for="petName">Nome Animale:</label>
+      <input type="text" id="petName" required>
+  
+      <label for="ownerName">Nome Proprietario:</label>
+      <input type="text" id="ownerName" required>
+  
+      <label for="species">Specie:</label>
+      <select id="species" required>
+        <option value="cane">Cane</option>
+        <option value="gatto">Gatto</option>
+        <option value="coniglio">Coniglio</option>
+        <option value="altro">Altro</option>
+      </select>
+  
+      <label for="breed">Razza:</label>
+      <input type="text" id="breed" required>
+  
+      <button type="submit">Aggiungi Animale</button>
+    </form>
+  
+    <h2>Lista Animali</h2>
+    <ul id="petList"></ul>
+  
+    <script src="./script1.js"></script>
 </body>
 </html>
