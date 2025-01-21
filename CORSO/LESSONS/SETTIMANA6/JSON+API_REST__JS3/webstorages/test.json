@@ -1,0 +1,9 @@
+{
+  "name": "Stefano",
+  "age": 34,
+  "liveNow": true,
+  "area": {
+    "coords": { "lat": 23.59, "lon": 48.972 }
+  },
+  "skills": ["HTML", "CSS", "JS"]
+}
