@@ -1,8 +1,10 @@
 const ButtonComponent = function (props) {
   return (
-    <button>
-      {props.textButton}
+    <>
+    <button className={props.bgColor} width={props.width} style={props.style}> 
+        {props.textButton} 
     </button>
+    </>
   );
 };
 

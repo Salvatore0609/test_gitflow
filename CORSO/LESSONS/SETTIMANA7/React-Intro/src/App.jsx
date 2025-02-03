@@ -3,6 +3,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import TopBar from "./components/TopBar";
 import EpiSection from "./components/EpiSection";
+import ClassComponent from "./components/ClassComponent";
 
 // questo file rappresenta il nostro PRIMO COMPONENTE REACT
 // è un file con estensione .jsx
@@ -29,17 +30,32 @@ function App() {
       <TopBar navTitle="Epicode - First React App" />
 
       <EpiSection
+        className="episection bg-danger"
         imageUrl="https://images.unsplash.com/photo-1734966901441-ac6c1fff1fd2?q=80&w=2017&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         imageWidth={400}
         description="Painting"
+        paddingBlock="1rem"
+        margin="1.5rem"
       />
       <EpiSection
+        className="episection bg-info"
         imageUrl="https://plus.unsplash.com/premium_photo-1732736768092-43a010784507?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         imageWidth={250}
         description="Landscape"
+        paddingBlock="1rem"
+        margin="2rem"
       />
-      <EpiSection imageUrl={reactLogo} imageWidth={100} description="Rect Logo" />
-      <EpiSection imageUrl={viteLogo} imageWidth={100} description="Vite Logo" />
+
+      <ClassComponent className="alert alert-primary" alertText="Componente a classe 1" />
+      <ClassComponent className="alert alert-danger" alertText="Componente a classe 2" />
+      <ClassComponent className="alert alert-primary" alertText="Componente a classe 3" />
+
+      <EpiSection className="episection bg-warning" imageUrl={reactLogo} imageWidth={100} description="Rect Logo" paddingBlock="1rem" margin=".5rem" />
+      <EpiSection className="episection bg-success" imageUrl={viteLogo} imageWidth={100} description="Vite Logo" paddingBlock="1rem" margin="1rem" />
+
+      <ClassComponent className="alert alert-primary" alertText="Componente a classe 4" />
+      <ClassComponent className="alert alert-primary" alertText="Componente a classe 5" />
+      <ClassComponent className="alert alert-success" alertText="Ultimo Alert" />
     </div>
   );
 }
