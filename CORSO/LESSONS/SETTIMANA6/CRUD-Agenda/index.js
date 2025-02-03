@@ -17,8 +17,6 @@ fetch("https://striveschool-api.herokuapp.com/api/agenda/")
 
     const row = document.getElementById("appointments-list");
 
-    asdajksdnjksakdajkdbk
-
     appointments.forEach(app => {
       console.log(app);
 
