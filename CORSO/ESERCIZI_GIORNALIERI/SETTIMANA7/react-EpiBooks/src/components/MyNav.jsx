@@ -7,7 +7,7 @@ const MyNav = (props) => {
         <Navbar.Brand className="text-white" href="#home">
           {props.title} — {props.claim}
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle className="bg-white" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link className="text-white" href="#">

@@ -8,7 +8,14 @@ import { Component } from "react";
 
 class AllTheBooks extends Component {
   state = {
-    Books: fantasy,
+    Books: fantasy.slice(0, 10),
+    Genre: fantasy,
+  };
+
+  showOtherBooks = () => {
+    const numberOfBooks = this.state.Books.length + 10;
+
+    this.setState({ Books: [...this.state.Books, ...this.state.Genre.slice(this.state.Books.length, numberOfBooks)] });
   };
 
   render() {
@@ -20,23 +27,21 @@ class AllTheBooks extends Component {
             onChange={(e) => {
               switch (e.target.value) {
                 case "Fantasy":
-                  this.setState({ Books: fantasy });
+                  this.setState({ Books: fantasy.slice(0, 10), Genre: fantasy });
                   break;
                 case "History":
-                  this.setState({ Books: history });
+                  this.setState({ Books: history.slice(0, 10), Genre: history });
                   break;
                 case "Horror":
-                  this.setState({ Books: horror });
+                  this.setState({ Books: horror.slice(0, 10), Genre: horror });
                   break;
                 case "Romance":
-                  this.setState({ Books: romance });
+                  this.setState({ Books: romance.slice(0, 10), Genre: romance });
                   break;
                 case "Scifi":
-                  this.setState({ Books: scifi });
+                  this.setState({ Books: scifi.slice(0, 10), Genre: scifi });
                   break;
                 default:
-                  this.setState({ Books: fantasy });
-                  break;
               }
             }}
           >
@@ -47,20 +52,20 @@ class AllTheBooks extends Component {
             <option>Scifi</option>
           </FormSelect>
         </div>
-        <div>
-          <Button variant="warning" onClick={() => this.setState({ Books: fantasy })}>
+        <div className="text-center">
+          <Button variant="warning" onClick={() => this.setState({ Books: fantasy.slice(0, 10), Genre: fantasy })}>
             fantasy
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: history })}>
+          <Button variant="warning" onClick={() => this.setState({ Books: history.slice(0, 10), Genre: history })}>
             history
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: horror })}>
+          <Button variant="warning" onClick={() => this.setState({ Books: horror.slice(0, 10), Genre: horror })}>
             horror
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: romance })}>
+          <Button variant="warning" onClick={() => this.setState({ Books: romance.slice(0, 10), Genre: romance })}>
             romance
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: scifi })}>
+          <Button variant="warning" onClick={() => this.setState({ Books: scifi.slice(0, 10), Genre: scifi })}>
             scifi
           </Button>
         </div>
@@ -79,6 +84,10 @@ class AllTheBooks extends Component {
             );
           })}
         </div>
+
+        <Button variant="warning" onClick={() => this.showOtherBooks()}>
+          altro...
+        </Button>
       </div>
     );
   }
