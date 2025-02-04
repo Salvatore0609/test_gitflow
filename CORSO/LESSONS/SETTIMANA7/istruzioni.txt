@@ -1,0 +1,24 @@
+aprire il terminale nella cartella:
+npm create vite@latest
+
+scegliere le varie opzioni e dare il nome alla cartella
+
+cd "nome directory"
+
+apriamo code --> code .
+
+scarichiamo i node modulese --> nmp i || npm install
+
+avviamo --> npm run dev
+
+UNA VOLTA CHE SIAMO SUL PROGETTO impostiamo il REACT PULENDO app.jsx togliendo ---
+
+puliamo i css sia index che app
+
+aggiungiamo "react/prop-types": "off" sotto rules in eslint.config.js
+
+sul terminale di vscode facciamo ctrl + c per chiudere la sessione avviata 
+
+e poi se vogliamo installiamo boostrap con il comando npm i bootstrap react-bootstrap 
+
+importiamo react-bootstrap sul main.jsx ---> import "bootstrap/dist/css/bootstrap.min.css"; subito sotto import { createRoot } from "react-dom/client";
