@@ -1,13 +1,13 @@
-import { Alert } from "react-bootstrap";
+import { Alert, Container } from "react-bootstrap";
 
 function Welcome() {
   return (
-    <div className="container">
+    <Container fluid className="p-0">
       <Alert className="text-center" variant="warning">
         Scegli il tuo libro!
       </Alert>
-      <p>Il miglior shop online per comprare i tuoi libri preferiti!</p>
-    </div>
+      <p className="text-center">Il miglior shop online per comprare i tuoi libri preferiti!</p>
+    </Container>
   );
 }
 

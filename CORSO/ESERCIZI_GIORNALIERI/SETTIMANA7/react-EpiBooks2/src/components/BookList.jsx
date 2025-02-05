@@ -48,18 +48,31 @@ class BookList extends Component {
   render() {
     return (
       <Container>
+        <Row className="my-3">
+          <Col>
+            <Form.Control
+              type="text"
+              placeholder="Cerca un libro..."
+              value={this.state.searchQuery}
+              onChange={(e) => this.setState({ searchQuery: e.target.value })}
+            />
+          </Col>
+        </Row>
+
         <Row>
-          <FormSelect
-            aria-label="Seleziona un genere"
-            value={this.state.genre === fantasy ? "Fantasy" : ""}
-            onChange={(e) => this.handleGenreChange(e.target.value)}
-          >
-            <option value="Fantasy">Fantasy</option>
-            <option value="History">History</option>
-            <option value="Horror">Horror</option>
-            <option value="Romance">Romance</option>
-            <option value="Scifi">Scifi</option>
-          </FormSelect>
+          <Form>
+            <FormSelect
+              aria-label="Seleziona un genere"
+              value={this.state.genre === fantasy ? "Fantasy" : ""}
+              onChange={(e) => this.handleGenreChange(e.target.value)}
+            >
+              <option value="Fantasy">Fantasy</option>
+              <option value="History">History</option>
+              <option value="Horror">Horror</option>
+              <option value="Romance">Romance</option>
+              <option value="Scifi">Scifi</option>
+            </FormSelect>
+          </Form>
         </Row>
 
         <Row>
@@ -69,17 +82,6 @@ class BookList extends Component {
                 {genre.toLowerCase()}
               </Button>
             ))}
-          </Col>
-        </Row>
-
-        <Row className="my-3">
-          <Col>
-            <Form.Control
-              type="text"
-              placeholder="Cerca un libro..."
-              value={this.state.searchQuery}
-              onChange={(e) => this.setState({ searchQuery: e.target.value })}
-            />
           </Col>
         </Row>
 
