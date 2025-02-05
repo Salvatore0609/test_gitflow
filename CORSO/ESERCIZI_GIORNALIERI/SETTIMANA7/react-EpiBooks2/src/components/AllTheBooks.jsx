@@ -1,4 +1,4 @@
-import { Button, Card, FormSelect } from "react-bootstrap";
+import { Button, Card, Container, FormSelect, Row } from "react-bootstrap";
 import fantasy from "../data/fantasy.json";
 import history from "../data/history.json";
 import horror from "../data/horror.json";
@@ -20,7 +20,7 @@ class AllTheBooks extends Component {
 
   render() {
     return (
-      <div className="container">
+      <Container>
         <div>
           <FormSelect
             aria-label="Default select example"
@@ -70,7 +70,7 @@ class AllTheBooks extends Component {
           </Button>
         </div>
 
-        <div className="row text-center d-flex justify-content-center">
+        <Row className="text-center justify-content-center">
           {this.state.books.map((book) => {
             return (
               <Card className="col-sm-6 col-md-4 col-lg-3 my-3 mx-2" key={`book-${book.asin}`} style={{ width: "18rem" }}>
@@ -83,12 +83,12 @@ class AllTheBooks extends Component {
               </Card>
             );
           })}
-        </div>
+        </Row>
 
         <Button variant="warning" onClick={() => this.showOtherBooks()}>
           altro...
         </Button>
-      </div>
+      </Container>
     );
   }
 }

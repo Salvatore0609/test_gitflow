@@ -1,5 +1,5 @@
 import "./App.css";
-import AllTheBooks from "./components/AllTheBooks";
+import BookList from "./components/BookList";
 import MyFooter from "./components/MyFooter";
 import MyNav from "./components/MyNav";
 import Welcome from "./components/Welcome";
@@ -9,7 +9,7 @@ function App() {
     <>
       <MyNav title="EpiBooks" claim="Cerca il libro che preferisci!" />
       <Welcome />
-      <AllTheBooks />
+      <BookList />
       <MyFooter />
     </>
   );
