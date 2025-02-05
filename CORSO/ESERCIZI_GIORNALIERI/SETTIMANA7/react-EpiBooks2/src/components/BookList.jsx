@@ -7,11 +7,14 @@ import scifi from "../data/scifi.json";
 import SingleBook from "./SingleBook";
 import { Component } from "react";
 
+const allBooksJson = [...fantasy, ...history, ...horror, ...romance, ...scifi];
+
 class BookList extends Component {
   state = {
     books: fantasy.slice(0, 12),
     genre: fantasy,
     searchQuery: "",
+    AllBooksAllGenre: allBooksJson,
   };
 
   showOtherBooks = () => {
@@ -95,11 +98,11 @@ class BookList extends Component {
         </Row>
 
         <Row className="text-center justify-content-center">
-          {this.state.books
-            .filter((book) => book.title.toLowerCase().includes(this.state.searchQuery.toLowerCase()))
-            .map((book) => (
-              <SingleBook key={book.asin} {...book} />
-            ))}
+          {this.state.searchQuery.toLowerCase().length > 0
+            ? this.state.AllBooksAllGenre.filter((book) => book.title.toLowerCase().includes(this.state.searchQuery.toLowerCase())).map((book) => (
+                <SingleBook key={book.asin} {...book} />
+              ))
+            : this.state.books.map((book) => <SingleBook key={book.asin} {...book} />)}
 
           {this.state.books.length < this.state.genre.length && (
             <Button className="justify-content-center text-secondary my-3" variant="warning" onClick={this.showOtherBooks}>
