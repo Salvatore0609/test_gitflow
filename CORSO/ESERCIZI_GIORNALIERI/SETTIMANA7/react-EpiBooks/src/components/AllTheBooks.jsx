@@ -8,14 +8,14 @@ import { Component } from "react";
 
 class AllTheBooks extends Component {
   state = {
-    Books: fantasy.slice(0, 10),
-    Genre: fantasy,
+    books: fantasy.slice(0, 12),
+    genre: fantasy,
   };
 
   showOtherBooks = () => {
-    const numberOfBooks = this.state.Books.length + 10;
+    const numberOfBooks = this.state.books.length + 12;
 
-    this.setState({ Books: [...this.state.Books, ...this.state.Genre.slice(this.state.Books.length, numberOfBooks)] });
+    this.setState({ books: [...this.state.books, ...this.state.genre.slice(this.state.books.length, numberOfBooks)] });
   };
 
   render() {
@@ -27,19 +27,19 @@ class AllTheBooks extends Component {
             onChange={(e) => {
               switch (e.target.value) {
                 case "Fantasy":
-                  this.setState({ Books: fantasy.slice(0, 10), Genre: fantasy });
+                  this.setState({ books: fantasy.slice(0, 12), genre: fantasy });
                   break;
                 case "History":
-                  this.setState({ Books: history.slice(0, 10), Genre: history });
+                  this.setState({ books: history.slice(0, 12), genre: history });
                   break;
                 case "Horror":
-                  this.setState({ Books: horror.slice(0, 10), Genre: horror });
+                  this.setState({ books: horror.slice(0, 12), genre: horror });
                   break;
                 case "Romance":
-                  this.setState({ Books: romance.slice(0, 10), Genre: romance });
+                  this.setState({ books: romance.slice(0, 12), genre: romance });
                   break;
                 case "Scifi":
-                  this.setState({ Books: scifi.slice(0, 10), Genre: scifi });
+                  this.setState({ books: scifi.slice(0, 12), genre: scifi });
                   break;
                 default:
               }
@@ -53,25 +53,25 @@ class AllTheBooks extends Component {
           </FormSelect>
         </div>
         <div className="text-center">
-          <Button variant="warning" onClick={() => this.setState({ Books: fantasy.slice(0, 10), Genre: fantasy })}>
+          <Button variant="warning" onClick={() => this.setState({ books: fantasy.slice(0, 12), genre: fantasy })}>
             fantasy
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: history.slice(0, 10), Genre: history })}>
+          <Button variant="warning" onClick={() => this.setState({ books: history.slice(0, 12), genre: history })}>
             history
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: horror.slice(0, 10), Genre: horror })}>
+          <Button variant="warning" onClick={() => this.setState({ books: horror.slice(0, 12), genre: horror })}>
             horror
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: romance.slice(0, 10), Genre: romance })}>
+          <Button variant="warning" onClick={() => this.setState({ books: romance.slice(0, 12), genre: romance })}>
             romance
           </Button>
-          <Button variant="warning" onClick={() => this.setState({ Books: scifi.slice(0, 10), Genre: scifi })}>
+          <Button variant="warning" onClick={() => this.setState({ books: scifi.slice(0, 12), genre: scifi })}>
             scifi
           </Button>
         </div>
 
         <div className="row text-center d-flex justify-content-center">
-          {this.state.Books.map((book) => {
+          {this.state.books.map((book) => {
             return (
               <Card className="col-sm-6 col-md-4 col-lg-3 my-3 mx-2" key={`book-${book.asin}`} style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={book.img} style={{ objectFit: "contain", minHeight: "420px" }} />
