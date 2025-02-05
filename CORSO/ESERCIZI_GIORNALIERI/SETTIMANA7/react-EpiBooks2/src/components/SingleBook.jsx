@@ -3,7 +3,7 @@ import { Component } from "react";
 
 class SingleBook extends Component {
   state = {
-    selected: false, // Stato per evidenziare il libro
+    selected: false,
   };
 
   toggleSelection = () => {
