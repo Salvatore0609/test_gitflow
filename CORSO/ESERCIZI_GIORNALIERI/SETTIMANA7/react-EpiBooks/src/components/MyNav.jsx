@@ -2,7 +2,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const MyNav = (props) => {
   return (
-    <Navbar expand="lg" className="bg-dark">
+    <Navbar className="bg-dark">
       <Container>
         <Navbar.Brand className="text-white" href="#home">
           {props.title} — {props.claim}
