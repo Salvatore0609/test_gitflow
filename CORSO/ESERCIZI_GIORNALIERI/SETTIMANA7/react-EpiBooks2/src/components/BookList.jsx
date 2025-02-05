@@ -15,10 +15,9 @@ class BookList extends Component {
   };
 
   showOtherBooks = () => {
-    this.setState((prevState) => {
-      const numberOfBooks = prevState.books.length + 12;
-      return { books: [...prevState.books, ...prevState.genre.slice(prevState.books.length, numberOfBooks)] };
-    });
+    const numberOfBooks = this.state.books.length + 12;
+
+    this.setState({ books: [...this.state.books, ...this.state.genre.slice(this.state.books.length, numberOfBooks)] });
   };
 
   handleGenreChange = (selectedGenre) => {
@@ -77,11 +76,21 @@ class BookList extends Component {
 
         <Row>
           <Col className="text-center">
-            {["Fantasy", "History", "Horror", "Romance", "Scifi"].map((genre) => (
-              <Button key={genre} className="mx-3 my-3" variant="warning" onClick={() => this.handleGenreChange(genre)}>
-                {genre.toLowerCase()}
-              </Button>
-            ))}
+            <Button className="mx-3 my-3" variant="warning" onClick={() => this.handleGenreChange("Fantasy")}>
+              fantasy
+            </Button>
+            <Button className="mx-3 my-3" variant="warning" onClick={() => this.handleGenreChange("History")}>
+              history
+            </Button>
+            <Button className="mx-3 my-3" variant="warning" onClick={() => this.handleGenreChange("Horror")}>
+              horror
+            </Button>
+            <Button className="mx-3 my-3" variant="warning" onClick={() => this.handleGenreChange("Romance")}>
+              romance
+            </Button>
+            <Button className="mx-3 my-3" variant="warning" onClick={() => this.handleGenreChange("Scifi")}>
+              scifi
+            </Button>
           </Col>
         </Row>
 
