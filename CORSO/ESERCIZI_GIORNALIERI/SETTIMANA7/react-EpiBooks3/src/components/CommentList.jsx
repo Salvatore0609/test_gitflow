@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 
-const CommentsList = ({ comments, onDelete }) => (
+const CommentList = ({ comments, onDelete }) => (
   <div>
     {comments.map((comment) => (
       <SingleComment key={comment._id} comment={comment} onDelete={onDelete} />
@@ -19,4 +19,4 @@ const SingleComment = ({ comment, onDelete }) => (
   </div>
 );
 
-export default CommentsList;
+export default CommentList;

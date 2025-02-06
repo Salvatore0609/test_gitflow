@@ -34,7 +34,7 @@ class AddComment extends Component {
             ))}
           </Form.Select>
         </Form.Group>
-        <Button type="submit" variant="success" className="mt-2">
+        <Button type="submit" variant="dark" className="my-3">
           Invia
         </Button>
       </Form>

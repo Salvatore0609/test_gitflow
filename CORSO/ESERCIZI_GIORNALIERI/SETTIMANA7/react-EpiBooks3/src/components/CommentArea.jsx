@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Spinner, Alert } from "react-bootstrap";
-import CommentsList from "./CommentsList";
+import CommentList from "./CommentList";
 import AddComment from "./AddComment";
 
 const API_URL = "https://striveschool-api.herokuapp.com/api/comments/";
@@ -65,7 +65,7 @@ class CommentArea extends Component {
       <div className="mt-3">
         {this.state.isLoading && <Spinner animation="border" />}
         {this.state.hasError && <Alert variant="danger">{this.state.errorMessage}</Alert>}
-        <CommentsList comments={this.state.comments} onDelete={this.deleteComment} />
+        <CommentList comments={this.state.comments} onDelete={this.deleteComment} />
         <AddComment bookId={this.props.bookId} onAdd={this.addComment} />
       </div>
     );
