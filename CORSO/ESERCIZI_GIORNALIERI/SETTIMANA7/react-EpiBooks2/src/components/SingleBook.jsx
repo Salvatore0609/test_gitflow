@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Badge, Card } from "react-bootstrap";
 import { Component } from "react";
 
 class SingleBook extends Component {
@@ -23,7 +23,7 @@ class SingleBook extends Component {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{category}</Card.Text>
-          <Card.Text>{price}€</Card.Text>
+          <Badge>{price}€</Badge>
         </Card.Body>
       </Card>
     );
