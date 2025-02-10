@@ -53,9 +53,9 @@ class BookList extends Component {
 
   render() {
     return (
-      <Container>
+      <Container fluid>
         <Row>
-          <Col md={8}>
+          <Col md={6}>
             <Form className="mb-3">
               <Form.Control
                 type="text"
