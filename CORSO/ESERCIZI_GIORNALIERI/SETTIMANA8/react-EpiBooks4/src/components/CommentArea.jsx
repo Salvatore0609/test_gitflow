@@ -22,6 +22,8 @@ class CommentArea extends Component {
   }
 
   fetchComments = async () => {
+    if (!this.props.bookId) return;
+
     this.setState({ isLoading: true });
     try {
       const response = await fetch(API_URL + this.props.bookId, {
@@ -35,6 +37,42 @@ class CommentArea extends Component {
     }
   };
 
+  addComment = async (newComment) => {
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${TOKEN}`,
+        },
+        body: JSON.stringify(newComment),
+      });
+
+      if (!response.ok) throw new Error("Errore nell'aggiunta del commento");
+
+      this.fetchComments(); // Ricarica i commenti dopo l'aggiunta
+    } catch (err) {
+      this.setState({ hasError: true, errorMessage: err.message });
+    }
+  };
+
+  deleteComment = async (commentId) => {
+    try {
+      const response = await fetch(API_URL + commentId, {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${TOKEN}` },
+      });
+
+      if (!response.ok) throw new Error("Errore nella cancellazione del commento");
+
+      this.setState({
+        comments: this.state.comments.filter((comment) => comment._id !== commentId),
+      });
+    } catch (err) {
+      this.setState({ hasError: true, errorMessage: err.message });
+    }
+  };
+
   render() {
     return (
       <div className="mt-3">
@@ -44,8 +82,8 @@ class CommentArea extends Component {
           <>
             {this.state.isLoading && <Spinner animation="border" />}
             {this.state.hasError && <Alert variant="danger">{this.state.errorMessage}</Alert>}
-            <CommentList comments={this.state.comments} />
-            <AddComment bookId={this.props.bookId} />
+            <CommentList comments={this.state.comments} onDelete={this.deleteComment} />
+            <AddComment bookId={this.props.bookId} onAdd={this.addComment} />
           </>
         )}
       </div>
