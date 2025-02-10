@@ -13,7 +13,7 @@ class BookList extends Component {
     books: fantasy.slice(0, 12),
     genre: fantasy,
     searchQuery: "",
-    selectedBookAsin: null, // Stato per il libro selezionato
+    selectedBookAsin: null,
   };
 
   handleGenreChange = (selectedGenre) => {

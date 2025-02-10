@@ -50,7 +50,7 @@ class CommentArea extends Component {
 
       if (!response.ok) throw new Error("Errore nell'aggiunta del commento");
 
-      this.fetchComments(); // Ricarica i commenti dopo l'aggiunta
+      this.fetchComments();
     } catch (err) {
       this.setState({ hasError: true, errorMessage: err.message });
     }
