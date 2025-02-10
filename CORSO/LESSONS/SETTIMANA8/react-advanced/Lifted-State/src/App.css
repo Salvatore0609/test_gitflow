@@ -1,0 +1,16 @@
+.table-item-selected {
+  font-weight: 900;
+}
+
+.table-item-selected:first-of-type {
+  background-color: palegreen;
+}
+.table-item-selected:nth-of-type(2) {
+  background-color: palegoldenrod;
+}
+.table-item-selected:nth-of-type(3) {
+  background-color: paleturquoise;
+}
+.table-item-selected:last-of-type {
+  background-color: palevioletred;
+}
