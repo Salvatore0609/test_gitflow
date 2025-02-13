@@ -1,14 +1,12 @@
-import { ListGroup } from "react-bootstrap";
-import SingleComment from "./SingleComment";
+import { ListGroup } from 'react-bootstrap'
+import SingleComment from './SingleComment'
 
-const CommentList = (props) => {
-  return (
-    <ListGroup>
-      {props.reviews.map((review) => (
-        <SingleComment key={review._id} review={review} fetchComments={props.fetchComments} />
-      ))}
-    </ListGroup>
-  );
-};
+const CommentList = ({ commentsToShow }) => (
+  <ListGroup style={{ color: 'black' }} className="mt-2">
+    {commentsToShow.map((comment) => (
+      <SingleComment comment={comment} key={comment._id} />
+    ))}
+  </ListGroup>
+)
 
-export default CommentList;
+export default CommentList
