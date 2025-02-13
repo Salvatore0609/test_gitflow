@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import SingleBook from './SingleBook'
-import { Col, Form, Row } from 'react-bootstrap'
-import CommentArea from './CommentArea'
+import { useState } from "react";
+import SingleBook from "./SingleBook";
+import { Col, Form, Row } from "react-bootstrap";
+import CommentArea from "./CommentArea";
 
 const BookList = ({ books }) => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedBook, setSelectedBook] = useState(null)
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedBook, setSelectedBook] = useState(null);
 
-  const changeSelectedBook = (asin) => {
-    setSelectedBook(asin)
-  }
+  const changeSelectedBookFunc = (asin) => {
+    setSelectedBook(asin);
+  };
 
   return (
     <>
@@ -18,12 +18,7 @@ const BookList = ({ books }) => {
           <Row className="justify-content-center mt-5">
             <Col xs={12} md={4} className="text-center">
               <Form.Group>
-                <Form.Control
-                  type="search"
-                  placeholder="Cerca un libro"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
+                <Form.Control type="search" placeholder="Cerca un libro" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
               </Form.Group>
             </Col>
           </Row>
@@ -32,11 +27,7 @@ const BookList = ({ books }) => {
               .filter((b) => b.title.toLowerCase().includes(searchQuery))
               .map((b) => (
                 <Col xs={12} md={4} key={b.asin}>
-                  <SingleBook
-                    book={b}
-                    selectedBook={selectedBook}
-                    changeSelectedBook={changeSelectedBook}
-                  />
+                  <SingleBook book={b} selectedBook={selectedBook} changeSelectedBook={changeSelectedBookFunc} />
                 </Col>
               ))}
           </Row>
@@ -46,7 +37,7 @@ const BookList = ({ books }) => {
         </Col>
       </Row>
     </>
-  )
-}
+  );
+};
 
-export default BookList
+export default BookList;
