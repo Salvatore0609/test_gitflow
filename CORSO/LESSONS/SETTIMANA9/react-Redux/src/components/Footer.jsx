@@ -1,3 +1,7 @@
-const Footer = () => <div className="text-bg-dark p-4">Epicode&copy; {new Date().getFullYear()}</div>;
+const Footer = () => (
+  <footer className="epizon-footer">
+    <span className="text-muted">Epizon {new Date().getFullYear()}©</span>
+  </footer>
+)
 
-export default Footer;
+export default Footer
