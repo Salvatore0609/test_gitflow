@@ -1,20 +1,19 @@
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
 import Job from "./Job";
 
 const MainSearch = () => {
   const [query, setQuery] = useState("");
   const [jobs, setJobs] = useState([]);
-
   const baseEndpoint = "https://strive-benchmark.herokuapp.com/api/jobs?search=";
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setQuery(e.target.value);
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(baseEndpoint + query + "&limit=20");
       if (response.ok) {
@@ -33,14 +32,17 @@ const MainSearch = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1 className="display-1">Remote Jobs Search</h1>
+          <Link to="/favourites">
+            <Button variant="info">Vedi Preferiti</Button>
+          </Link>
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
-            <Form.Control type="search" value={query} onChange={handleChange} placeholder="type and press Enter" />
+            <Form.Control type="search" value={query} onChange={handleChange} placeholder="Type and press Enter" />
           </Form>
         </Col>
         <Col xs={10} className="mx-auto mb-5">
-          {jobs.map(jobData => (
+          {jobs.map((jobData) => (
             <Job key={jobData._id} data={jobData} />
           ))}
         </Col>
