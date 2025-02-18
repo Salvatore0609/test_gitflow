@@ -1,38 +1,54 @@
-import { Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { Star, StarFill } from 'react-bootstrap-icons'
+import { useSelector, useDispatch } from 'react-redux'
 
 const Job = ({ data }) => {
-  const dispatch = useDispatch();
-  const favourites = useSelector((state) => state.favourites.favourites);
+  const favourites = useSelector((state) => state.favourite.list)
+  const dispatch = useDispatch()
 
-  const isFavourite = favourites.includes(data.company_name);
-
-  const handleFavourite = () => {
-    if (isFavourite) {
-      dispatch({ type: "REMOVE_FAVOURITE", payload: data.company_name });
-    } else {
-      dispatch({ type: "ADD_FAVOURITE", payload: data.company_name });
-    }
-  };
+  const isFav = favourites.includes(data.company_name)
 
   return (
-    <Row className="mx-0 mt-3 p-3" style={{ border: "1px solid #00000033", borderRadius: 4 }}>
+    <Row
+      className="mx-0 mt-3 p-3"
+      style={{ border: '1px solid #00000033', borderRadius: 4 }}
+    >
       <Col xs={3}>
+        {isFav ? (
+          <StarFill
+            color="gold"
+            size={16}
+            className="mr-2 my-auto"
+            onClick={() =>
+              dispatch({
+                type: 'REMOVE_FROM_FAVOURITE',
+                payload: data.company_name,
+              })
+            }
+          />
+        ) : (
+          <Star
+            color="gold"
+            size={16}
+            className="mr-2 my-auto"
+            onClick={() =>
+              dispatch({
+                type: 'ADD_TO_FAVOURITE',
+                payload: data.company_name,
+              })
+            }
+          />
+        )}
         <Link to={`/${data.company_name}`}>{data.company_name}</Link>
       </Col>
-      <Col xs={6}>
+      <Col xs={9}>
         <a href={data.url} target="_blank" rel="noreferrer">
           {data.title}
         </a>
       </Col>
-      <Col xs={3}>
-        <Button variant={isFavourite ? "danger" : "success"} onClick={handleFavourite}>
-          {isFavourite ? "Rimuovi dai preferiti" : "Aggiungi ai preferiti"}
-        </Button>
-      </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default Job;
+export default Job

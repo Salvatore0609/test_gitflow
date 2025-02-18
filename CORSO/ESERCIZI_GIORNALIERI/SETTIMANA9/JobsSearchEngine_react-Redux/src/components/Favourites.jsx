@@ -1,26 +1,38 @@
-import { useSelector } from "react-redux";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Row, Col, ListGroup, ListGroupItem, Button } from "react-bootstrap";
+import { StarFill } from "react-bootstrap-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 const Favourites = () => {
-  const favourites = useSelector((state) => state.favourites.favourites);
+  const favourites = useSelector((state) => state.favourite.list);
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   return (
     <Container>
       <Row>
-        <Col className="my-3">
-          <h1 className="display-4">Aziende Preferite</h1>
-          {favourites.length > 0 ? (
-            favourites.map((company, index) => (
-              <Row key={index} className="mx-0 mt-3 p-3" style={{ border: "1px solid #00000033", borderRadius: 4 }}>
-                <Col>
-                  <Link to={`/${company}`}>{company}</Link>
-                </Col>
-              </Row>
-            ))
-          ) : (
-            <p>Nessuna azienda tra i preferiti.</p>
-          )}
+        <Col xs={10} className="mx-auto my-3">
+          <h1>Favourites</h1>
+          <Button onClick={() => navigate("/")}>Home</Button>
+        </Col>
+        <Col xs={10} className="mx-auto my-3">
+          <ListGroup>
+            {favourites.map((fav, i) => (
+              <ListGroupItem key={i}>
+                <StarFill
+                  className="mr-2"
+                  onClick={() =>
+                    dispatch({
+                      type: "REMOVE_FROM_FAVOURITE",
+                      payload: fav,
+                    })
+                  }
+                />
+                <Link to={"/" + fav}>{fav}</Link>
+              </ListGroupItem>
+            ))}
+          </ListGroup>
         </Col>
       </Row>
     </Container>
