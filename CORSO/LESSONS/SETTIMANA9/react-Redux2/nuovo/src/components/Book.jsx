@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 
 const Book = ({
-  book,
+  book
   // changeBook, bookSelected
 }) => {
   const bookSelected = useSelector((state) => state.bookSelected.content);
@@ -14,7 +14,6 @@ const Book = ({
       onClick={() => {
         // changeBook(book);
         dispatch({ type: "SELECT_BOOK", payload: book });
-        /* dispatch({ type: "ADD_TO_CART", payload: bookSelected }); */
       }}
       style={{ cursor: "pointer" }}
     >
