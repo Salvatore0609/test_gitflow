@@ -1,7 +1,9 @@
 /* 
 1) Quali sono i tipi primitivi principali in TypeScript?
-string, number, boolean, null, undefined, bigint, symbol
 
+RISPOSTA: string, number, boolean, null, undefined, bigint, symbol
+
+-----
 
 2) Crea tre variabili tipizzate: una stringa con il tuo nome, un numero con la tua età, e un booleano che indica se stai studiando TypeScript.
 
