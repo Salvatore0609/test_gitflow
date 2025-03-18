@@ -1,11 +1,9 @@
-package it.epicode.Esercizio3.classi;
-
-import it.epicode.Esercizio3.exceptions.BancaException;
+package it.epicode.esercizio3;
 
 public class ContoCorrente {
     private String titolare;
     private int nMovimenti;
-    private final int maxMovimenti = 50;
+    private final int maxMovimenti= 50;
     private double saldo;
 
     public ContoCorrente(String titolare, double saldo) {
@@ -15,17 +13,14 @@ public class ContoCorrente {
     }
 
     public void preleva(double x) throws BancaException {
-        if (saldo - x < 0) {
-            nMovimenti++; // Aumenta comunque il contatore dei movimenti
+        if(nMovimenti < maxMovimenti) saldo = saldo - x;
+        else saldo = saldo - x- 0.50;
+        nMovimenti++;
+
+        if(saldo<0) {
             throw new BancaException("Il conto è in rosso");
         }
 
-        if (nMovimenti < maxMovimenti) {
-            saldo -= x;
-        } else {
-            saldo -= x + 0.50;
-        }
-        nMovimenti++;
     }
 
     public double restituisciSaldo() {
@@ -36,7 +31,27 @@ public class ContoCorrente {
         return titolare;
     }
 
+    public void setTitolare(String titolare) {
+        this.titolare = titolare;
+    }
+
     public int getnMovimenti() {
         return nMovimenti;
+    }
+
+    public void setnMovimenti(int nMovimenti) {
+        this.nMovimenti = nMovimenti;
+    }
+
+    public int getMaxMovimenti() {
+        return maxMovimenti;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

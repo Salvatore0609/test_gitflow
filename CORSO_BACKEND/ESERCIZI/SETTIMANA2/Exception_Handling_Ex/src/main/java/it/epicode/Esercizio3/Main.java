@@ -1,64 +1,65 @@
-package it.epicode.Esercizio3;
+package it.epicode.esercizio3;
 
-import it.epicode.Esercizio3.classi.ContoCorrente;
-import it.epicode.Esercizio3.classi.ContoOnLine;
-import it.epicode.Esercizio3.exceptions.BancaException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
 public class Main {
-
-    private static final Logger logger = LoggerFactory.getLogger(Main.class);
-
+    private static final Logger logger =  LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
+        ContoCorrente contoCorrente = new ContoCorrente("mauro larese",1000);
+        ContoOnline contoOnline = new ContoOnline("mauro larese",1000, 500);
+
         Scanner scanner = new Scanner(System.in);
-
-        // Creazione di un ContoCorrente e un ContoOnLine
-        ContoCorrente conto1 = new ContoCorrente("Mario Rossi", 1000);
-        ContoOnLine conto2 = new ContoOnLine("Luigi Verdi", 2000, 500);
-
+        System.out.println("prelievo da Conto Corrente");
         while (true) {
+            System.out.println("Quanto vuoi prelevare? scrivi 0 per terminare "+ contoCorrente.getSaldo());
+
+            int prelievo = 0;
             try {
-                System.out.println("\nScegli un'opzione:");
-                System.out.println("1. Preleva da ContoCorrente");
-                System.out.println("2. Preleva da ContoOnLine");
-                System.out.println("3. Esci");
-                System.out.print("Scelta: ");
-                int scelta = scanner.nextInt();
-
-                if (scelta == 3) {
-                    System.out.println("Uscita dal programma.");
-                    break;
-                }
-
-                System.out.print("Inserisci l'importo da prelevare: ");
-                double importo = scanner.nextDouble();
-
-                switch (scelta) {
-                    case 1:
-                        conto1.preleva(importo);
-                        System.out.println("Prelievo effettuato con successo. Nuovo saldo: " + conto1.restituisciSaldo());
-                        break;
-                    case 2:
-                        conto2.preleva(importo);
-                        System.out.println("Prelievo effettuato con successo. Nuovo saldo: " + conto2.restituisciSaldo());
-                        break;
-                    default:
-                        System.out.println("Scelta non valida.");
-                }
-
-            } catch (BancaException e) {
-                logger.error("Errore durante il prelievo: {}", e.getMessage());
-                System.out.println("Errore: " + e.getMessage());
+                prelievo = scanner.nextInt();
+                if(prelievo == 0) break;
             } catch (Exception e) {
-                logger.error("Errore generico: {}", e.getMessage());
-                System.out.println("Errore: Input non valido.");
-                scanner.nextLine(); // Pulisce il buffer dello scanner
+                logger.error("Devi inserire un numero");
+
+                scanner.nextLine();
+                continue;
             }
+
+            try {
+                contoCorrente.preleva(prelievo);
+            } catch (BancaException e) {
+                logger.error(e.getMessage());
+            }
+
         }
 
-        scanner.close();
+        System.out.println("prelievo da Conto Corrente online");
+        while(true) {
+            System.out.println("Quanto vuoi prelevare? scrivi 0 per terminare "+ contoOnline.getSaldo());
+
+            int prelievo = 0;
+            try {
+                prelievo = scanner.nextInt();
+            } catch (Exception e) {
+                logger.error("Devi inserire un numero");
+                scanner.nextLine();
+                continue;
+
+            }
+
+            if(prelievo == 0) break;
+
+            try {
+                contoOnline.preleva(prelievo);
+                contoOnline.stampaSaldo();
+            } catch (BancaException e) {
+                logger.error(e.getMessage());
+            }
+
+
+
+        }
     }
 }
