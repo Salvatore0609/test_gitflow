@@ -1,0 +1,31 @@
+package it.epicode.case_editrici.test_DAO;
+
+import it.epicode.case_editrici.CasaEditrice;
+import it.epicode.case_editrici.CasaEditriceDAO;
+import it.epicode.libri.Libro;
+import it.epicode.libri.LibroDataAssetsObjectDAO;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+public class Main {
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("epicode");
+        EntityManager em = emf.createEntityManager();
+
+        CasaEditriceDAO casaEditriceDAO = new CasaEditriceDAO(em);
+        LibroDataAssetsObjectDAO libriDao = new LibroDataAssetsObjectDAO(em);
+
+        em.getTransaction().begin();
+        //creo una casa editrice
+        CasaEditrice ce = new CasaEditrice(null, "Mondadori", "Via Roma 1", "Milano");
+
+        Libro l = new Libro("Il signore degli anelli", "Tolkien", 1954);
+
+        casaEditriceDAO.insertNotTx(ce);
+        libriDao.insertNotTx(l);
+        em.getTransaction().commit();
+        em.close();
+        emf.close();
+    }
+}

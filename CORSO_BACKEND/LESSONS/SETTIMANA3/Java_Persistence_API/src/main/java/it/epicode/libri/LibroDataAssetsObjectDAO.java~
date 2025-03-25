@@ -30,7 +30,7 @@ public class LibroDataAssetsObjectDAO {
         em.getTransaction().commit();
     }
     //insert no transaction
-    public void insertNotTx(Libro l) {
+    public static void insertNotTx(Libro l) {
         em.persist(l);
     }
 
