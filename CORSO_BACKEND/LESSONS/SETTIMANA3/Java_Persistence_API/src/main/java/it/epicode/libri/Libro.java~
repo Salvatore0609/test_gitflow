@@ -1,0 +1,59 @@
+package it.epicode.libri;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "libri")
+public class Libro {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    //
+    private String titolo;
+    private String autore;
+    private Integer annoPubblicazione;
+
+    public Libro(String titolo, String autore, int annoPubblicazione) {
+        this.titolo = titolo;
+        this.autore = autore;
+        this.annoPubblicazione = annoPubblicazione;
+    }
+
+    //costruttore vuoto obbligatorio
+    public Libro(){
+    }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getAutore() {
+        return autore;
+    }
+
+    public void setAutore(String autore) {
+        this.autore = autore;
+    }
+
+    public Integer getAnnoPubblicazione() {
+        return annoPubblicazione;
+    }
+
+    public void setAnnoPubblicazione(Integer annoPubblicazione) {
+        this.annoPubblicazione = annoPubblicazione;
+    }
+}
+
