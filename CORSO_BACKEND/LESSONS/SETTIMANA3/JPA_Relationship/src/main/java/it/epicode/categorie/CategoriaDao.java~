@@ -1,0 +1,30 @@
+package it.epicode.categorie;
+
+import it.epicode.case_editrici.CasaEditrice;
+import jakarta.persistence.EntityManager;
+
+public class CategoriaDao {
+    private EntityManager em;
+
+    public CategoriaDao(EntityManager em){
+        this.em = em;
+    }
+
+    public Categoria findById(Long id){
+        return em.find(Categoria.class, id);
+    }
+
+    public void insert(Categoria a){
+        em.persist(a);
+    }
+
+    public void update(Categoria a){
+        em.merge(a);
+    }
+
+    public void delete(Long id){
+        Categoria a = em.findById(id);
+        em.remove(a);
+    }
+}
+
