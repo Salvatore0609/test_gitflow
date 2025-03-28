@@ -17,7 +17,7 @@ public class Autore {
     @Column(length = 50)
     private String nazionalita;
 
-    @OneToMany(mappedBy = "autore")
+    @OneToMany(mappedBy = "autore", cascade = {CascadeType.REMOVE})
     private List<Libro> libri;
 
     @Override

@@ -1,0 +1,47 @@
+package it.epicode.caseeditrici;
+
+import it.epicode.autori.Autore;
+import jakarta.persistence.EntityManager;
+
+import java.util.List;
+
+public class CasaEditriceDAO {
+    private EntityManager em;
+
+
+    public Autore findById(Long id) {
+        return em.find(Autore.class, id);
+    }
+
+    public void insert(Autore a) {
+        em.persist(a);
+    }
+
+    public void insert (List<Autore> autori) {
+        autori.forEach(a -> em.persist(a));
+
+    }
+
+
+    public void delete(Autore a) {
+        em.remove(a);
+    }
+
+
+    public void update(Autore a) {
+        em.merge(a);
+    }
+
+
+    public List<CasaEditrice>  findByNome(String nomeDaCercare) {
+        return em.createQuery("SELECT c FROM CasaEditrice c WHERE c.nome = :nome", CasaEditrice.class)
+                .setParameter("nome", nomeDaCercare)
+                .getResultList();
+    }
+
+    public List<CasaEditrice> findAll() {
+        return em.createQuery("SELECT c FROM CasaEditrice c", CasaEditrice.class)
+                .getResultList();
+    }
+
+}

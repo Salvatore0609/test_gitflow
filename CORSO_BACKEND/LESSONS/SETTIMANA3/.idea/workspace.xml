@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="864818c2-69a7-4a44-81b8-f05d1e19c824" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ESERCIZI/SETTIMANA3/JPA_Relationship/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ESERCIZI/SETTIMANA3/JPA_Relationship/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ESERCIZI/SETTIMANA3/JPA_Relationship/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ESERCIZI/SETTIMANA3/JPA_Relationship/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/MainCreateLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/MainCreateLibro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/autori/Autore.java" beforeDir="false" afterPath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/autori/Autore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/case_editrici/CasaEditrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/case_editrici/CasaEditrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/categorie/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/categorie/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/libri/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/JPA_Relationship/src/main/java/it/epicode/libri/Libro.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Salvatore0609"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Salvatore0609/Epicode.git",
+    "accountId": "d2e3d0fd-5273-4f73-935d-d30d7a262ccc"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2utKtW4iljoCXM7YSzp2YYpV3Mw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="864818c2-69a7-4a44-81b8-f05d1e19c824" name="Changes" comment="" />
+      <created>1743062646071</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743062646071</updated>
+    </task>
+    <servers />
+  </component>
+</project>

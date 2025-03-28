@@ -17,9 +17,12 @@ public class Autore {
     @Column(length = 50)
     private String nazionalita;
 
+    // con mapped by dico che la relazione principale è quella che si trova in Libro
+    // il cascade REMOVE permette quando elimino un autore di eliminare tutti i suoi libri
     @OneToMany(mappedBy = "autore", cascade = {CascadeType.REMOVE})
     private List<Libro> libri;
 
+    // per evitare un ciclo infinito non inserire nel tostring i libri
     @Override
     public String toString() {
         return "Autore{" +

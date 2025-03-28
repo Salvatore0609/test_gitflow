@@ -43,10 +43,12 @@ public class MainCreateLibro {
         Libro libro2 = new Libro(null, "Il Signore degli Anelli", autore2, casaEditrice, List.of(fantasy, giallo));
 
         libroDao.insert(libro);
+        libroDao.insert(libro2);
 
         em.getTransaction().commit();
 
         libroDao.findById(1L);
+        libroDao.findById(2L);
 
         em.close();
         emf.close();

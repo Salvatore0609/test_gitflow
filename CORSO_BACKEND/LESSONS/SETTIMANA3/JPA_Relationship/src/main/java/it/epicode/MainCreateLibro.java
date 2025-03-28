@@ -27,6 +27,7 @@ public class MainCreateLibro {
 
         Autore autore = new Autore(null, "Andrea", "Colombo", "italiana");
         Autore autore2 = new Autore(null, "Giovanni", "Devalle", "italiana");
+
         CasaEditrice casaEditrice = new CasaEditrice(null, "Mondadori", "Italia", LocalDate.of(1990, 1, 1));
 
         Categoria fantasy = new Categoria(null, "fantasy");
@@ -36,8 +37,14 @@ public class MainCreateLibro {
 
         em.getTransaction().begin();
 
+        // le salvo direttamente perchè non sono inserite nel libro
         categoriaDao.insert(thriller);
         categoriaDao.insert(avventura);
+        // non serve salvare fantasy e giallo perchè sono già presenti nel libro
+        // per cui vengono salvati a cascata nel momento in cui salvo il libro
+
+        //casaEditriceDAO.insert(casaEditrice);
+        //autoreDAO.insert(autore);
 
         Libro libro = new Libro(null,"Acqua Azzurra", autore, casaEditrice, List.of(fantasy, giallo));
         Libro libro2 = new Libro(null, "Il Signore degli Anelli", autore2, casaEditrice, List.of(fantasy, giallo));

@@ -31,7 +31,7 @@ public class CasaEditrice {
                 ", dataFondazione=" + dataFondazione +
                 '}';
     }
-    
+
     public CasaEditrice(Long id, String nome, String sede, LocalDate dataFondazione ) {
         this.id = id;
         this.dataFondazione = dataFondazione;

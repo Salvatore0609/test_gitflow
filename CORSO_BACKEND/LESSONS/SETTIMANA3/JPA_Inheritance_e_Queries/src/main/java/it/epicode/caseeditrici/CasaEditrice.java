@@ -1,0 +1,23 @@
+package it.epicode.caseeditrici;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "case_editrici")
+@NamedQuery(name = "casa_editrice.find.all", query = "SELECT ce FROM CasaEditrice ce")
+public class CasaEditrice {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
+    @Column(length = 50, nullable = false,  unique = true)
+    private String nome;
+    @Column(length = 50)
+    private String sede;
+}
