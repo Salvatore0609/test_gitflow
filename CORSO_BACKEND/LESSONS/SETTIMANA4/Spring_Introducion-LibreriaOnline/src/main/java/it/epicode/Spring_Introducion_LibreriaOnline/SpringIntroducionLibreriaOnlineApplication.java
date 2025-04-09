@@ -1,0 +1,13 @@
+package it.epicode.Spring_Introducion_LibreriaOnline;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringIntroducionLibreriaOnlineApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringIntroducionLibreriaOnlineApplication.class, args);
+	}
+
+}

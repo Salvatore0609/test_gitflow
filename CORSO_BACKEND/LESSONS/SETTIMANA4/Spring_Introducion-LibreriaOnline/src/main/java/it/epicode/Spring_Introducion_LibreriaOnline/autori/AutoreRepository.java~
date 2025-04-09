@@ -1,0 +1,4 @@
+package it.epicode.Spring_Introducion_LibreriaOnline.autori;
+
+public interface AutoreRepository {
+}

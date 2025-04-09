@@ -21,7 +21,7 @@ import lombok.experimental.SuperBuilder;
 // JOINED: una tabella per ogni classe con i campi comuni in una tabella padre
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @SuperBuilder
-public abstract class Pubblicazione {
+public abstract class  Pubblicazione {
     // solo nella classe padre va messa @Id
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

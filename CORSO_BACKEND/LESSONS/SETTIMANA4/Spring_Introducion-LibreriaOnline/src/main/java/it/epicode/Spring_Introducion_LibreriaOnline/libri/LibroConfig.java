@@ -1,0 +1,28 @@
+package it.epicode.Spring_Introducion_LibreriaOnline.libri;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class LibroConfig {
+
+    @Bean
+    public Libro LeMieRicette() {
+        Libro libro = new Libro();
+        libro.setTitolo("Le mie ricette");
+        libro.setGenere("Cucina");
+        libro.setAnnoPubblicazione(2019);
+
+        return libro;
+    }
+
+    @Bean
+    public Libro LeMiePrigioni() {
+        Libro libro = new Libro();
+        libro.setTitolo("Le mie prigioni");
+        libro.setGenere("Romanzo");
+        libro.setAnnoPubblicazione(2019);
+
+        return libro;
+    }
+}

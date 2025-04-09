@@ -1,0 +1,32 @@
+package it.epicode.Spring_Introducion_LibreriaOnline.libri;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class LibriRunner implements CommandLineRunner {
+
+    @Autowired
+    private LibroRepository libroRepository;
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        Libro libro1 = new Libro();
+        libro1.setTitolo("Il Signore degli Anelli");
+        libro1.setAutore("J.R.R. Tolkien");
+        libro1.setGenere("Fantasy");
+        libro1.setAnnoPubblicazione(1954);
+
+        libroRepository.save(libro1);
+
+        Libro libro2 = new Libro();
+        libro2.setTitolo("Harry Potter e la Pietra Filosofale");
+        libro2.setAutore("J.K. Rowling");
+        libro2.setGenere("Fantasy");
+        libro2.setAnnoPubblicazione(1997);
+
+        libroRepository.save(libro2);
+    }
+}

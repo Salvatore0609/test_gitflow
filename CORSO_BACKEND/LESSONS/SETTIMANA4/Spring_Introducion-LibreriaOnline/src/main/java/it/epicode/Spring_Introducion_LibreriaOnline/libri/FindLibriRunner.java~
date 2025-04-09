@@ -1,0 +1,51 @@
+package it.epicode.Spring_Introducion_LibreriaOnline.libri;
+
+import it.epicode.Spring_Introducion_LibreriaOnline.autori.Autore;
+import it.epicode.Spring_Introducion_LibreriaOnline.autori.AutoreRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+@Component
+@RequiredArgsConstructor
+@Order(2)
+public class FindLibriRunner implements CommandLineRunner {
+
+    private final LibroRepository libroRepository;
+    private final AutoreRepository autoreRepository;
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("-------------------------");
+        System.out.println("RICERCA LIBRI");
+        System.out.println("-------------------------");
+        List<Libro> libri = libroRepository.findAll();
+        libri.forEach(System.out::println);
+
+        System.out.println("-------------------------");
+        System.out.println("RICERCA LIBRI PER TITOLO");
+        System.out.println("-------------------------");
+
+        Libro libro = libroRepository.findByTitolo("Harry Potter e la Camera dei Segreti");
+        System.out.println(libro);
+
+        Autore autore = autoreRepository.findById(2L).get();
+        System.out.println(autore);
+        System.out.println("-------------------------");
+        System.out.println("RICERCA LIBRI PER AUTORE");
+        System.out.println("-------------------------");
+        List<Libro> libriAutore = libroRepository.findAllByAutore(autore);
+        System.out.println("Libri di " + autore.getNome() + " " + autore.getCognome() + " : " + libriAutore.size());
+        libriAutore.forEach(System.out::println);
+
+        System.out.println("-------------------------");
+        System.out.println("RICERCA LIBRI PER GENERE");
+        System.out.println("-------------------------");
+        List<Libro> libriGenere = libroRepository.findAllByGenere("Fantasy");
+        libriGenere.forEach(System.out::println);
+
+    }
+}

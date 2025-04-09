@@ -1,0 +1,67 @@
+package it.epicode.Spring_Introducion_LibreriaOnline.libri;
+
+import it.epicode.Spring_Introducion_LibreriaOnline.autori.Autore;
+import it.epicode.Spring_Introducion_LibreriaOnline.autori.AutoreRepository;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class LibriRunner implements CommandLineRunner {
+//1
+//    @Autowired
+//    private LibroRepository libroRepository;
+//    @Autowired
+//    private AutoreRepository autoreRepository;
+
+//2
+//    private LibroRepository libroRepository;
+//    private AutoreRepository autoreRepository;
+//
+//    public LibriRunner(LibroRepository libroRepository, AutoreRepository autoreRepository) {
+//        this.libroRepository = libroRepository;
+//        this.autoreRepository = autoreRepository;
+//    }
+
+//3  private LibroRepository libroRepository;
+//   private AutoreRepository autoreRepository;
+//   + @AllArgsConstructor
+
+//4   private final LibroRepository libroRepository;
+//    private final AutoreRepository autoreRepository;
+//    + @RequiredArgsConstructor
+
+    private final LibroRepository libroRepository;
+    private final AutoreRepository autoreRepository;
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        Autore autore1 = new Autore();
+        autore1.setNome("J.R.R.");
+        autore1.setCognome("Tolkien");
+        autoreRepository.save(autore1);
+
+        Autore autore2 = new Autore();
+        autore2.setNome("J.K.");
+        autore2.setCognome("Rowling");
+        autoreRepository.save(autore2);
+
+        Libro libro1 = new Libro();
+        libro1.setTitolo("Il Signore degli Anelli");
+        libro1.setAutore(autore1);
+        libro1.setGenere("Fantasy");
+        libro1.setAnnoPubblicazione(1954);
+        libroRepository.save(libro1);
+
+        Libro libro2 = new Libro();
+        libro2.setTitolo("Harry Potter e la Pietra Filosofale");
+        libro2.setAutore(autore2);
+        libro2.setGenere("Fantasy");
+        libro2.setAnnoPubblicazione(1997);
+        libroRepository.save(libro2);
+    }
+}
