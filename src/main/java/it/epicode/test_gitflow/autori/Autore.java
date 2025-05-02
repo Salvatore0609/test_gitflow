@@ -9,7 +9,7 @@ public class Autore {
     private String email;
     private String telefono;
     private String indirizzo;
-    private String citta;
+    private String cittaDiResidenza; // il frontend ha usato cittaResidenza invece di citta
     private String provincia;
     private String cap;
     private String nazione;
