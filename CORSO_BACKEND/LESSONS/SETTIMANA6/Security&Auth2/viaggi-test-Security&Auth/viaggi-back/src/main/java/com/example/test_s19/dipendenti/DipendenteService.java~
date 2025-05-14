@@ -105,7 +105,6 @@ public class DipendenteService {
         emailSenderService.sendEmail(dipendente.getEmail(), "Benvenuto", "Ciao "+dipendente.getNome() + " " + dipendente.getCognome()+"! Benvenuto nella nostra azienda!" );
         return new CommonResponse(dipendente.getId());
     }
-
     public Page<Dipendente> findAll(int page, int size, String sort) {
         Pageable pageable = PageRequest.of(page, size, Sort.by(sort));
         return dipendenteRepository.findAll(pageable);

@@ -5,7 +5,7 @@ function Login() {
     event.preventDefault();
     //quando si avvia l'app va a recuperare l'indirizzo dell'api (a seconda se è ambiente di produzione o di sviluppo)
     const apiUrl = import.meta.env.VITE_API_URL;
-    console.log("api url", apiUrl);
+
     fetch(apiUrl + "/dipendenti/login", {
       method: "POST",
       headers: {

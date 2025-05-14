@@ -58,7 +58,6 @@ public class DipendenteController {
     @PreAuthorize("isAuthenticated()")
     @PatchMapping(value = "/{id}/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ResponseStatus(HttpStatus.OK)
-
     public Dipendente uploadImage(@PathVariable Long id, @RequestPart MultipartFile file) {
         dipendenteService.uploadImage(id, file);
         return dipendenteService.getDipendenteById(id);
